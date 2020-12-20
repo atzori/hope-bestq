@@ -1,0 +1,5716 @@
+{
+    "http://dati.senato.it/sparql": [
+        {
+            "label": {
+                "type": "literal",
+                "value": "AnnotationProperty"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2002/07/owl#AnnotationProperty"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "OntologyProperty"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2002/07/owl#OntologyProperty"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Class"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2002/07/owl#Class"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "InverseFunctionalProperty"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2002/07/owl#InverseFunctionalProperty"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Ontology"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2002/07/owl#Ontology"
+            }
+        }
+    ],
+    "http://dbpedia.org/sparql": [
+        {
+            "label": {
+                "type": "literal",
+                "value": "image",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Image"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "persona",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Person"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "agente",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Agent"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "time period",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TimePeriod"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "career station",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CareerStation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "place",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Place"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "settlement",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Settlement"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "populated place",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/PopulatedPlace"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "work",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Work"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "atleta",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Athlete"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "organisation",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Organisation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Sports team member",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SportsTeamMember"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Organisation member",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/OrganisationMember"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "species",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Species"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "eukaryote",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Eukaryote"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "village",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Village"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "animale",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Animal"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "opera musicale",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MusicalWork"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "struttura architettonica",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ArchitecturalStructure"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "person function",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/PersonFunction"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "soccer player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SoccerPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "album",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Album"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "insect",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Insect"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "movie",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Film"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "edificio",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Building"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "company",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Company"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "infrastructure",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Infrastructure"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "artista",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Artist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "event",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Event"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "office holder",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/OfficeHolder"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "musical artist",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MusicalArtist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "television show",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TelevisionShow"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "station",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Station"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "written work",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/WrittenWork"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "natural place",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/NaturalPlace"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "gruppo musicale",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Band"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "single",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Single"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "libro",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Book"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "pianta",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Plant"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "societal event",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SocietalEvent"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "mean of transportation",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MeanOfTransportation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "educational institution",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/EducationalInstitution"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sports season",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SportsSeason"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "software",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Software"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "scuola",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/School"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "town",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Town"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sports team",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SportsTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "distesa d'acqua",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BodyOfWater"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "politician",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Politician"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sports team season",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SportsTeamSeason"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sports event",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SportsEvent"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ship",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Ship"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "river",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/River"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "gruppo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Group"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "football league season",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/FootballLeagueSeason"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "emittente",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Broadcaster"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "militare",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MilitaryPerson"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "soccer club",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SoccerClub"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "writer",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Writer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "mollusca",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Mollusca"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "route of transportation",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RouteOfTransportation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "university",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/University"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "military unit",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MilitaryUnit"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "regione amministrativa",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AdministrativeRegion"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ruscello",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Stream"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "video game",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/VideoGame"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "citt\u00e0",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/City"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "road",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Road"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "device",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Device"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "historic place",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HistoricPlace"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "gridiron football player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GridironFootballPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "scientist",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Scientist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "cricketer",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Cricketer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "region",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Region"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "mountain",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Mountain"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giocatore di baseball",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BaseballPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "winter sport Player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/WinterSportPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giocatore di football americano",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AmericanFootballPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "military conflict",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MilitaryConflict"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "radio station",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RadioStation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "fictional character",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/FictionalCharacter"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "soccer tournoment",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SoccerTournament"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "soccer manager",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SoccerManager"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "torneo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Tournament"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "periodical literature",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/PeriodicalLiterature"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ice hockey player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/IceHockeyPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "fish",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Fish"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sports manager",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SportsManager"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sostanza chimica",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ChemicalSubstance"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "motorsport season",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MotorsportSeason"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ecclesiastico",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Cleric"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "national collegiate athletic association team season",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/NCAATeamSeason"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "proteina",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Protein"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "aeroporto",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Airport"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "rugby player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RugbyPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lake",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Lake"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "elezione",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Election"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "motore d'automobile",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AutomobileEngine"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "engine",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Engine"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "mammifero",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Mammal"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "political party",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/PoliticalParty"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "composto chimico",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ChemicalCompound"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "malattia",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Disease"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "uccello",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Bird"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "historic building",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HistoricBuilding"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "automobile",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Automobile"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "premio",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Award"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giocatore di football australiano",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AustralianRulesFootballPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "royalty",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Royalty"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "aereo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Aircraft"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "cyclist",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Cyclist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giocatore di pallacanestro",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BasketballPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "stadium",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Stadium"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "corpo celeste",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CelestialBody"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "island",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Island"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "protected area",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ProtectedArea"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Food",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Food"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "language",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Language"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "fungus",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Fungus"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "canale televisivo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TelevisionStation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "documento",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Document"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sound",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Sound"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "soccer club season",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SoccerClubSeason"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "attivit\u00e0",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Activity"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "television episode",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TelevisionEpisode"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "newspaper",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Newspaper"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "vescovo cristiano",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ChristianBishop"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "weapon",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Weapon"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "museum",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Museum"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "etnia",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/EthnicGroup"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "canzone",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Song"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sport facility",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SportFacility"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sales",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Sales"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "drug",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Drug"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "struttura anatomica",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AnatomicalStructure"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "magazine",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Magazine"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giornale accademico",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AcademicJournal"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "nuotatore",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Swimmer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "surname",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Surname"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "venue",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Venue"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "biomolecola",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Biomolecule"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "member of parliament",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MemberOfParliament"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "edificio religioso",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ReligiousBuilding"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "opera d'arte",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Artwork"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "government agency",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GovernmentAgency"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "allenatore",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Coach"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "college coach",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CollegeCoach"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "country",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Country"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "pugile",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Boxer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "anfibio",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Amphibian"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "military structure",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MilitaryStructure"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "attore",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Actor"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "reptile",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Reptile"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "fumetto",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Comic"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sports league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SportsLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "wrestler",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Wrestler"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "volleyball player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/VolleyballPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ponte",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Bridge"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "motorsport racer",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MotorsportRacer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "gymnast",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Gymnast"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "racing driver",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RacingDriver"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "comics character",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ComicsCharacter"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "cartone animato",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Cartoon"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "website",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Website"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "railway line",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RailwayLine"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "noble",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Noble"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "power station",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/PowerStation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Supreme Court of the United States case",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SupremeCourtOfTheUnitedStatesCase"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "record label",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RecordLabel"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "tennis player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TennisPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "discografia dell'artista",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ArtistDiscography"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "stella",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Star"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "enzima",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Enzyme"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "saint",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Saint"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "play",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Play"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "planet",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Planet"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "figure skater",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/FigureSkater"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "aracnide",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Arachnid"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ArtificialSatellite",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ArtificialSatellite"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "hospital",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Hospital"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "olympics",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Olympics"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "olympic event",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/OlympicEvent"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "banca",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Bank"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "topical concept",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TopicalConcept"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "name",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Name"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "race horse",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RaceHorse"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "football match",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/FootballMatch"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "anime",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Anime"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "compagnia aerea",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Airline"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "torneo di golf",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GolfTournament"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "given name",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GivenName"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "castello",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Castle"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "diocese",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Diocese"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "horse",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Horse"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "park",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Park"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "locomotive",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Locomotive"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "television season",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TelevisionSeason"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "convention",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Convention"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "diga",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Dam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "manga",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Manga"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Gaelic games player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GaelicGamesPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "year",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Year"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "golf player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GolfPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "martial artist",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MartialArtist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "congressman",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Congressman"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "national football league season",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/NationalFootballLeagueSeason"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "race",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Race"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "clerical administrative region",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ClericalAdministrativeRegion"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "shopping mall",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ShoppingMall"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "public transit system",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/PublicTransitSystem"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "treno",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Train"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "delinquente",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Criminal"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giudice",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Judge"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "horse race",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HorseRace"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "architetto",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Architect"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "comics creator",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ComicsCreator"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Torneo di Women's Tennis Association",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/WomensTennisAssociationTournament"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "crustacean",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Crustacean"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "unit of work",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/UnitOfWork"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "case",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Case"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Legal Case",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/LegalCase"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "governor",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Governor"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sciatore",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Skier"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "rugby club",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RugbyClub"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "hockey team",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HockeyTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "library",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Library"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "soap character",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SoapCharacter"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "monarca",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Monarch"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "mountain range",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MountainRange"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "information appliance",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/InformationAppliance"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "reginetta di bellezza",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BeautyQueen"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "painter",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Painter"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "legislature",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Legislature"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Satellite",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Satellite"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lighthouse",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Lighthouse"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "cratere",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Crater"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "stazione ferroviaria",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RailwayStation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "soccer league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SoccerLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "handball player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HandballPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "genere musicale",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MusicGenre"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "poesia",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Poem"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "president",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/President"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giorno festivo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Holiday"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "amusement park attraction",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AmusementParkAttraction"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "cultivar (cultivated variety)",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CultivatedVariety"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "tower",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Tower"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "hollywood cartoon",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HollywoodCartoon"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "programming language",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ProgrammingLanguage"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "figura mitologica",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MythologicalFigure"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "motorcycle rider",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MotorcycleRider"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "bevanda",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Beverage"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "restaurant",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Restaurant"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "non-profit organisation",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Non-ProfitOrganisation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "mayor",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Mayor"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "philosopher",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Philosopher"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "squadra di pallacanestro",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BasketballTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sport",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Sport"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "prigione",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Prison"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "publisher",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Publisher"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "musical",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Musical"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "minerale",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Mineral"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "game",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Game"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "model",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Model"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "trade union",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TradeUnion"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giornalista",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Journalist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "uva",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Grape"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giocatore di scacchi",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ChessPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "asteroide",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Asteroid"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "fashion",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Fashion"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "cardinale",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Cardinal"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "colour",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Colour"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "mountain pass",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MountainPass"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "bus company",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BusCompany"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "programma radiofonico",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RadioProgram"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "motocicletta",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Motorcycle"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "composizione di musica classica",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ClassicalMusicComposition"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giocatore di badminton",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BadmintonPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "prime minister",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/PrimeMinister"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "gran premio",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GrandPrix"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "galaxy",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Galaxy"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ski area",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SkiArea"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "comedian",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Comedian"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "wrestling event",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/WrestlingEvent"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Site of Special Scientific Interest",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SiteOfSpecialScientificInterest"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "attore porno",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AdultActor"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "albergo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Hotel"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "emittente",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BroadcastNetwork"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "World Heritage Site",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/WorldHeritageSite"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "speedway rider",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SpeedwayRider"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "genre",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Genre"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "torneo di tennis",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TennisTournament"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "evento naturale",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/NaturalEvent"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "economist",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Economist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Eurovision song contest entry",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/EurovisionSongContestEntry"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "curler",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Curler"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "religious",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Religious"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "corsa ciclistica",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CyclingRace"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "felce",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Fern"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "nascar driver",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/NascarDriver"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "comic strip",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ComicStrip"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "mixed martial arts event",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MixedMartialArtsEvent"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "batterio",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Bacteria"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "database biologico",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BiologicalDatabase"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "film festival",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/FilmFestival"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "grotta",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Cave"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "horse rider",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HorseRider"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "montagne russe",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RollerCoaster"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "theatre",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Theatre"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "earthquake",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Earthquake"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "imprenditore",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BusinessPerson"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "results of a sport competition",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SportCompetitionResult"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "senator",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Senator"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "baronetto",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Baronet"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "campo da golf",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GolfCourse"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "volcano",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Volcano"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "reali britannici",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BritishRoyalty"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ingeniere",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Engineer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Formula One racer",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/FormulaOneRacer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "olympic result",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/OlympicResult"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lega di baseball",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BaseballLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "fashion designer",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/FashionDesigner"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ghiacciaio",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Glacier"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "storico",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Historian"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "conifer",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Conifer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "currency",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Currency"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "canale",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Canal"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "squadra di cricket",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CricketTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sceneggiatore",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ScreenWriter"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "osso",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Bone"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "poker player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/PokerPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lega di pallacanestro",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BasketballLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "monument",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Monument"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "astronauta",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Astronaut"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "wine region",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/WineRegion"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ambasciatore",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Ambassador"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "cervello",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Brain"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giardino",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Garden"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "formaggio",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Cheese"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "darts player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/DartsPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "chef",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Chef"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "rugby league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RugbyLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "casa vinicola",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Winery"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "jockey (horse racer)",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Jockey"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "music festival",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MusicFestival"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "pattinatore",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Skater"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "voice actor",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/VoiceActor"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "presenter",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Presenter"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "table tennis player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TableTennisPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "law firm",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/LawFirm"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "medico",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Medician"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "rocket",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Rocket"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "magnoliofita",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/FloweringPlant"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "squadra di football australiano",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AustralianFootballTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "muschio",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Moss"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "squadra di ciclismo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CyclingTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lacrosse player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/LacrossePlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sumo wrestler",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SumoWrestler"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "culturista",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Bodybuilder"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "snooker player",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SnookerPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "fotografo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Photographer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "canoista",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Canoeist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "pugile amatoriale",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AmateurBoxer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "road junction",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RoadJunction"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "entomologo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Entomologist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "arteria",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Artery"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giocatore di squash",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SquashPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "nerve",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Nerve"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ippodromo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Racecourse"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "pope",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Pope"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "squadra di pallamano",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HandballTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "green alga",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GreenAlga"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "eclissi solare",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SolarEclipse"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Database",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Database"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "radio host",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RadioHost"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "muscle",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Muscle"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "horse trainer",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HorseTrainer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "classical music artist",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ClassicalMusicArtist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "road tunnel",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RoadTunnel"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "poet",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Poet"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ice hockey league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/IceHockeyLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "birrificio",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Brewery"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "canottiere",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Rower"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "baseball season",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BaseballSeason"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Playboy Playmate",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/PlayboyPlaymate"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "race track",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RaceTrack"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giocatore di netball",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/NetballPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "campo da cricket",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CricketGround"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "archei",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Archaea"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "vein",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Vein"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "personaggio animanga",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AnimangaCharacter"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "cycad",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Cycad"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ligament",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Ligament"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "giocatore di beach volley",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BeachVolleyballPlayer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "squadra di football canadese",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CanadianFootballTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "national collegiate athletic association athlete",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "scuderia formula 1",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/FormulaOneTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "embryology",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Embryology"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "railway tunnel",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/RailwayTunnel"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "costellazione",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Constellation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lega di football americano",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AmericanFootballLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "valle",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Valley"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "chitarrista",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Guitarist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "instrumentalist",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Instrumentalist"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "volleyball league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/VolleyballLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "sea",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Sea"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "club moss",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ClubMoss"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "speedway team",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SpeedwayTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "congresso scientifico",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AcademicConference"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "water ride",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/WaterRide"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "launch pad",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/LaunchPad"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "assasino",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Murderer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "tunnel",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Tunnel"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "spacecraft",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Spacecraft"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "college",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/College"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lymph",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Lymph"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "cancelliere",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Chancellor"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Concentration camp",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ConcentrationCamp"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "allenatore di pallavolo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/VolleyballCoach"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Comedy Group",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ComedyGroup"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "year in spaceflight",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/YearInSpaceflight"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "presentatore televisivo",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TelevisionHost"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lacrosse league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/LacrosseLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "continente",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Continent"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "handball league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HandballLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "squadra di football americano",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AmericanFootballTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Gnetophytes",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Gnetophytes"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "squadra di baseball",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BaseballTeam"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "snooker world ranking",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SnookerWorldRanking"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "polo league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/PoloLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "space station",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SpaceStation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "field hockey league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/FieldHockeyLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "snooker world champion",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SnookerChamp"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "softball league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SoftballLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "novella",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Novel"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "waterway tunnel",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/WaterwayTunnel"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "space shuttle",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SpaceShuttle"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "inline hockey league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/InlineHockeyLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "golf league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GolfLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "motorcycle racing league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MotorcycleRacingLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "tennis league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/TennisLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "speedway league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/SpeedwayLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "project",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Project"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "research project",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ResearchProject"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "cricket league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CricketLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "bay",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Bay"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "national football league event",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/NationalFootballLeagueEvent"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lega di football canadese",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CanadianFootballLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "ginkgo biloba",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Ginkgo"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lega automobilistica",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AutoRacingLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lega di football australiano",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/AustralianFootballLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "skyscraper",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Skyscraper"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "gene",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Gene"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "GeneLocation",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/GeneLocation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "curling league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/CurlingLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "farmer",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Farmer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "videogames league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/VideogamesLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "prete",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Priest"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "HumanGene",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HumanGene"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "HumanGeneLocation",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/HumanGeneLocation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Lawyer",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Lawyer"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "MouseGene",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MouseGene"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "MouseGeneLocation",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MouseGeneLocation"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lega di bowling",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BowlingLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "lega di pugilato",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/BoxingLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "elemento chimico",
+                "xml:lang": "it"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/ChemicalElement"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "mixed martial arts league",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/MixedMartialArtsLeague"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Singer",
+                "xml:lang": "en"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dbpedia.org/ontology/Singer"
+            }
+        }
+    ],
+    "https://dati.camera.it/sparql": [
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "voto del deputato in una votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/voto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atti di indirizzo e controllo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/aic"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "intervento in una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/intervento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/discussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "dibattito"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/dibattito"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/atto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "seduta"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/seduta"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/votazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assegnazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assegnazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "stato iter"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/statoIter"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "risposta scritta alle interrogazioni"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/rispostaAIC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "relatore di un atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/relatore"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Person"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/Person"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "doc"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/DOC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "deputato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/deputato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "allegato ad una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/allegatoDiscussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legge"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legge"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "versione testo atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/versioneTestoAtto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "elezione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/elezione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "ufficio Parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/ufficioParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "bollettino"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/bollettino"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "autore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/autore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoSenato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "senatore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/senatore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "membro di Governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/membroGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "cronologia"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/cronologia"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "richiesta parere"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/richiestaParere"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "post"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/post"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "incarico"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/incarico"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo governativo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organoGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "luogo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/luogo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "abbinamento"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/abbinamento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "trasmissione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/trasmissione"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Online Account"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/OnlineAccount"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "gruppo parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/gruppoParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/governo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente del Consiglio dei ministri"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteConsiglioMinistri"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "componente del Gruppo Misto"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/componenteGruppoMisto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Camera dei deputati"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assemblea"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assemblea"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sessione legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sessioneLegislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sistema elettorale"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sistemaElettorale"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Repubblica"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteRepubblica"
+            }
+        },
+        {
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2000/01/rdf-schema#Class"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "natura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/natura"
+            }
+        }
+    ]
+}
