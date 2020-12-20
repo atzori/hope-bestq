@@ -1,0 +1,109 @@
+@import "~bootstrap/scss/bootstrap";
+
+$background: #eefbfb75;
+$dark-blue: #12232e;
+$light-blue: #007cc7;
+$lightest-blue: #4da8da;
+$shadow-dark-blue: #203647;
+$shadow-light-blue: #eefbfb;
+$md-width: 768px;
+
+#main-container,
+html {
+	background-color: $background;
+}
+
+#navbar {
+	background-color: $light-blue;
+	.navbar-brand {
+		font-weight: bold;
+		color: $shadow-dark-blue;
+		padding-right: 1em;
+		border-right: 1px solid white;
+	}
+	.nav-link {
+		color: $shadow-light-blue;
+		padding: 0 0.7em;
+
+		&:hover {
+			font-weight: bold;
+		}
+	}
+}
+
+#prova1 {
+	margin-left: auto;
+	margin-right: auto;
+	table-layout: fixed;
+	width: 90%;
+	td {
+		border: none;
+	}
+	.DnD-cell {
+		width: 2%;
+	}
+
+	.propertyCell {
+		width: 15%;
+	}
+
+	.valueCell {
+		width: 75%;
+	}
+
+	.showCell {
+		width: 4%;
+	}
+}
+
+#resource-table {
+	margin-left: auto;
+	margin-right: auto;
+	table-layout: fixed;
+	width: 90%;
+	td {
+		border: none;
+		overflow: hidden;
+		word-wrap: break-word;
+	}
+	.drag-cell {
+		width: 2%;
+	}
+
+	.property-cell {
+		width: 15%;
+	}
+	td.property-cell {
+		//text-transform: capitalize;
+		font-weight: 500;
+	}
+
+	.value-cell {
+		width: 75%;
+	}
+
+	.show-cell {
+		width: 4%;
+		text-align: center;
+	}
+}
+
+#footer {
+	width: 98%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #20364790;
+	p {
+		float: left;
+		padding: 8px;
+		margin: 0;
+		color: #eefbfb;
+	}
+	button {
+		display: block;
+		margin-left: auto;
+		margin-right: 1px;
+	}
+}
