@@ -6,6 +6,16 @@ import Table from "react-bootstrap/Table";
 import Attribute from "./Attribute";
 
 export default function ResourceTable(props) {
+	// Viene modificato l'attributo con i nuovi valori
+	function changeAttribute(attributeID, newAttribute) {
+		const aux = [...props.resource];
+		const indexOfProp = aux.findIndex(
+			(attribute) => attribute.ID === attributeID
+		);
+		aux[indexOfProp] = newAttribute;
+		props.setResource(aux);
+	}
+
 	function onDragEnd(result) {
 		const { destination, source } = result;
 		// Se destination è null, ovvero se l'utente trascina la riga dove non può essere spostata non viene effettuata nessuna modifca
@@ -23,9 +33,18 @@ export default function ResourceTable(props) {
 		// [props.data[source.index], props.data[destination.index]] = [props.data[destination.index], props.data[source.index]]
 
 		// Viene rimosso l'elemento trascinato in nuova posizione dall'utente e salvato nella vaiabile droppedElement
-		let droppedElement = props.data.splice(source.index, 1)[0];
+		let droppedElement = props.resource.splice(source.index, 1)[0];
 		// Viene inserito l'elemento nella nuova posizione
-		props.data.splice(destination.index, 0, droppedElement);
+		props.resource.splice(destination.index, 0, droppedElement);
+		console.log(droppedElement, destination.index);
+		console.log(
+			"elemento precedente : ",
+			props.resource[destination.index - 1]
+		);
+		console.log(
+			"elemento successivo : ",
+			props.resource[destination.index + 1]
+		);
 	}
 
 	return (
@@ -49,8 +68,9 @@ export default function ResourceTable(props) {
 								{props.resource.map((attribute, index) => (
 									<Attribute
 										key={attribute.ID}
-										attribute={attribute}
 										index={index}
+										attribute={attribute}
+										changeAttribute={changeAttribute}
 									/>
 								))}
 								{provided.placeholder}

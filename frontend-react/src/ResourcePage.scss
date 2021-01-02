@@ -9,8 +9,11 @@ $shadow-light-blue: #eefbfb;
 $md-width: 768px;
 
 #main-container,
-html {
+#root,
+html,
+body {
 	background-color: $background;
+	height: 100%;
 }
 
 #navbar {
@@ -31,36 +34,12 @@ html {
 	}
 }
 
-#prova1 {
-	margin-left: auto;
-	margin-right: auto;
-	table-layout: fixed;
-	width: 90%;
-	td {
-		border: none;
-	}
-	.DnD-cell {
-		width: 2%;
-	}
-
-	.propertyCell {
-		width: 15%;
-	}
-
-	.valueCell {
-		width: 75%;
-	}
-
-	.showCell {
-		width: 4%;
-	}
-}
-
 #resource-table {
 	margin-left: auto;
 	margin-right: auto;
 	table-layout: fixed;
 	width: 90%;
+
 	td {
 		border: none;
 		overflow: hidden;
@@ -106,4 +85,69 @@ html {
 		margin-left: auto;
 		margin-right: 1px;
 	}
+}
+
+#notfound-container {
+	margin-top: 5em;
+
+	text-align: center;
+	button {
+		font-weight: bold;
+		background-color: $lightest-blue;
+		border-radius: 20px;
+		padding: 10px 16px;
+		border-width: 0;
+		&:hover {
+			background-color: $light-blue;
+		}
+	}
+}
+
+.value-container {
+	margin-bottom: 1em;
+	div.col {
+		height: 100%;
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+	.editButtonSpan {
+		float: right;
+	}
+}
+
+.modified {
+	color: #4169e1;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+#editButtonSpan {
+	font-weight: normal;
+	color: black;
+	margin-left: 10px;
+}
+
+.editButton {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 2px;
+}
+
+.btn-span {
+	margin-right: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#modifica {
+	color: blue;
+}
+
+#applica {
+	color: green;
+}
+
+#annulla {
+	color: red;
 }

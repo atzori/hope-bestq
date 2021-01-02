@@ -4,6 +4,7 @@ from query_functions import run_query
 
 app = Flask(__name__, template_folder="ReactBuilds")
 
+
 @app.route('/')
 def redirect_home():
     return redirect('/homepage')
@@ -23,19 +24,31 @@ def search_by_uri():
     resource_uri = request.args.get('uri')
 
     query = 'select distinct ?propertyURI ?propertyLabel ?value ?valueLabel where {' \
-             f'<{resource_uri}> ?propertyURI ?value.' \
-             'OPTIONAL{?propertyURI rdfs:label ?propertyLabel. FILTER( (LANGMATCHES(LANG(?propertyLabel), "en") || LANG(?propertyLabel)="") ) }' \
-             f'OPTIONAL{{?value rdfs:label ?valueLabel FILTER( LANGMATCHES(LANG(?valueLabel),"{language}") || LANG(?valueLabel)="" ) }}'\
-             f'FILTER( LANGMATCHES(LANG(?value),"{language}") || LANG(?value)="" || !isLiteral(?value))' \
-             '} GROUP BY ?propertyURI ?propertyLabel ORDER BY ?propertyURI'
+        f'<{resource_uri}> ?propertyURI ?value.' \
+        'OPTIONAL{?propertyURI rdfs:label ?propertyLabel. FILTER( (LANGMATCHES(LANG(?propertyLabel), "en") || LANG(?propertyLabel)="") ) }' \
+        f'OPTIONAL{{?value rdfs:label ?valueLabel FILTER( LANGMATCHES(LANG(?valueLabel),"{language}") || LANG(?valueLabel)="" ) }}'\
+        f'FILTER( LANGMATCHES(LANG(?value),"{language}") || LANG(?value)="" || !isLiteral(?value))' \
+        '} GROUP BY ?propertyURI ?propertyLabel ORDER BY ?propertyURI'
     query_result = run_query(endpoint, query, 0)
+    print(query_result)
     if type(query_result) is not str:
 
-        resource = structure_attributes_list(query_result['results']['bindings'])
+        resource = structure_attributes_list(
+            query_result['results']['bindings'])
         print(resource)
         return render_template('resource/index.html', resource=resource)
     else:
         return redirect_home
+
+
+@app.route('/prova')
+def prova():
+
+    with open('./prova.json') as f:
+        data = json.load(f)
+
+    data = structure_attributes_list(data)
+    return make_response(jsonify(data))
 
 # Resource -> lista di proprietà della risorsa
 # Resource Attribute -> Una determinata attributo della risorsa contenente (URI proprietà e label se presente, lista di valori della proprietà,
@@ -43,6 +56,8 @@ def search_by_uri():
 # AttributeValues -> Lista di valori di una proprietà
 # AttributeValue -> Valore di una proprietà, contiene (un ID, il valore, il label del valore, un booleano modifying che indica se si sta modificando il valore,
 # un booleano che indica se è stato modificato il valore, e una stringa che indica il metodo di comparazione scelto.
+
+
 class ResourceAttribute:
     def __init__(self, attribute, attribute_index):
         uri = attribute['propertyURI']['value']
@@ -54,7 +69,8 @@ class ResourceAttribute:
         value_datatype = attribute['value']['datatype'] if 'datatype' in attribute['value'] else None
         value = attribute['value']['value']
         value_label = attribute['valueLabel']['value'] if 'valueLabel' in attribute else None
-        self.value = {'type': value_type, 'datatype': value_datatype, 'value': value, 'label': value_label}
+        self.value = {'type': value_type, 'datatype': value_datatype,
+                      'value': value, 'label': value_label}
 
 
 class AttributeValue:
@@ -66,7 +82,13 @@ class AttributeValue:
         self.label = value['label']
         self.editing = False
         self.edited = False
-        self.comparison = 'default'
+        if self.label is None and self.type != 'literal':
+            if self.type == 'uri':
+                self.comparison = 'uri'
+            else:
+                self.comparison = 'type-based'
+        else:
+            self.comparison = 'exactstring'
 
 
 # FUnziona che data una lista di attributi, modifica la struttura dati in cui sono memorizzati per poter effettuare azioni in frontend
@@ -80,24 +102,28 @@ def structure_attributes_list(attributes_list):
     # Variabile che conterrà la lista di attributi al termine della formattazione corretta degli attributi
     structured_attributes_list = []
     # Utilizzo la classe per creare oggetti attribute e sostituirli agli oggetti ottenuti dalla query
-    attributes_list = [vars(ResourceAttribute(attribute, index)) for index, attribute in enumerate(attributes_list)]
+    attributes_list = [vars(ResourceAttribute(attribute, index))
+                       for index, attribute in enumerate(attributes_list)]
     # Per ogni attributo nella lista veongono filtrati gli attributi con la stessa proprietà in modo tale da inserire
     # i diversi valori per la stessa proprietà in una lista e così mostrare solo una volta la proprietà con i diversi valori
     for attribute in attributes_list:
         uri_property = attribute['property']['uri']
         # Filtro la lista di attributi con lo stesso uri
-        same_uri_list = [attribute for attribute in attributes_list if attribute['property']['uri'] == uri_property]
+        same_uri_list = [
+            attribute for attribute in attributes_list if attribute['property']['uri'] == uri_property]
         # Utilizzo la classe AttributeValue per creare oggetti value e li inserisco in una lista
-        value_list = [vars(AttributeValue(attribute['value'], index, attribute['ID'])) for index, attribute in enumerate(same_uri_list)]
+        value_list = [vars(AttributeValue(attribute['value'], index, attribute['ID']))
+                      for index, attribute in enumerate(same_uri_list)]
         # Filtro la lista di attributi togliendo quelli già salvati ?
-        attributes_list = [attribute for attribute in attributes_list if attribute['property']['uri'] != uri_property]
+        attributes_list = [
+            attribute for attribute in attributes_list if attribute['property']['uri'] != uri_property]
         # Se la lista di valori dell'attributo non è vuota viene inserita la lista di attributi nel campo value dell'attributo
         if value_list:
             attribute['value'] = value_list
             # Viene inserito l'attributo nella lista che verrà restituita
             structured_attributes_list.append(attribute)
 
-    #return jsonify(structured_attributes_list)
+    # return jsonify(structured_attributes_list)
     return structured_attributes_list
 
 

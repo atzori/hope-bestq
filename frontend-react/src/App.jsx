@@ -20,7 +20,7 @@ function App(props) {
 		});
 	}
 
-	// useEffect(getResource, []);
+	useEffect(getResource, []);
 
 	return (
 		<Container fluid id="main-container">
@@ -32,16 +32,33 @@ function App(props) {
 					<Nav.Link href="#about">About</Nav.Link>
 				</Nav>
 			</Navbar>
-			<ResourceTable resource={resource} />
-			<Container fluid id="footer">
-				<p>
-					Dopo aver modificato gli attributi per effettuare una query
-					clicca il tasto QUERY presente sulla destra
-				</p>
-				<Button variant="success" size="lg">
-					Esegui Query
-				</Button>
-			</Container>
+			{resource !== [] && resource !== undefined ? (
+				<Container id="resource-container" fluid>
+					<ResourceTable
+						resource={resource}
+						setResource={setResource}
+					/>
+					<br />
+					<br />
+					<Container fluid id="footer">
+						<p>
+							Dopo aver modificato gli attributi per effettuare
+							una query clicca il tasto QUERY presente sulla
+							destra
+						</p>
+						<Button variant="success" size="lg">
+							Esegui Query
+						</Button>
+					</Container>
+				</Container>
+			) : (
+				<Container id="notfound-container">
+					<h3 className="notfound-msg">
+						La risorsa richiesta non è stata trovata
+					</h3>
+					<Button>GO TO HOMEPAGE</Button>
+				</Container>
+			)}
 		</Container>
 	);
 }

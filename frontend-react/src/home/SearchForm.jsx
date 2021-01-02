@@ -148,6 +148,7 @@ export default function SearchForm(props) {
 					}
 				});
 		} else {
+			setIsLoading(true);
 			window.location.href = `/resource?endpoint=${props.endpointUrl}&language=${props.language}&uri=${search}`;
 		}
 	}
@@ -219,6 +220,11 @@ export default function SearchForm(props) {
 							))}
 						</Dropdown.Menu>
 					</Dropdown>
+					{props.endpointTypes !== [] && (
+						<Spinner animation="border" role="status">
+							<span className="sr-only">Loading...</span>
+						</Spinner>
+					)}
 					{resourceType !== null && (
 						<Button
 							id="reset-type-btn"
