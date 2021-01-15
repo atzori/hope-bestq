@@ -34,6 +34,12 @@ body {
 	}
 }
 
+.width-90-centered {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 #resource-table {
 	margin-left: auto;
 	margin-right: auto;
@@ -150,4 +156,25 @@ body {
 
 #annulla {
 	color: red;
+}
+
+.resource-preview {
+	margin: 10px 0;
+	border: 1px solid #007cc740;
+	border-radius: 15px;
+	&:hover {
+		background-color: #007cc735;
+		cursor: pointer;
+	}
+	.result-title {
+		font-weight: 500;
+		font-size: 1.3em;
+		margin-bottom: 5px;
+		float: left;
+	}
+	.result-url {
+		font-weight: light;
+		text-align: right;
+		color: #aaa;
+	}
 }

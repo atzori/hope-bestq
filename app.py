@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, make_response, request, json, jsonify
 from pathlib import Path
-from query_functions import run_query
+from query_functions import run_query, user_query
 
 app = Flask(__name__, template_folder="ReactBuilds")
 
@@ -41,6 +41,42 @@ def search_by_uri():
         return redirect_home
 
 
+@app.route('/query', methods=['POST'])
+def red():
+    req = request.get_json()
+    endpoint_URL = req['endpointUrl']
+    language = req['language']
+    resource_type = req['resourceType']
+    constraints = req['constraints']
+
+    print(constraints)
+    query_result, attribute_to_show = user_query(
+        constraints, resource_type, endpoint_URL, language)
+
+    if type(query_result) is not str:
+        resources = query_result['results']['bindings'] or None
+        resources = [vars(ResourcePreview(resource, attribute_to_show, index))
+                     for index, resource in enumerate(resources)]
+        return make_response(jsonify({'resources': resources, 'toShow': attribute_to_show}))
+    else:
+        return make_response(jsonify(query_result), 408)
+
+
+class ResourcePreview:
+    def __init__(self, resource, attribute_to_show, resource_index):
+        self.ID = f'resource_{resource_index}'
+        self.label = resource['label']['value']
+        self.uri = resource['resource']['value']
+        self.comment = resource['comment']['value']
+        self.thumbnail = resource['thumbnail']['value']
+        attributes = [{'attributeID': attributeID, 'values': resource[attributeID]
+                       ['value'].split(' | ')} for attributeID in attribute_to_show]
+        # for attributeID in attribute_to_show:
+        #    attributes.update(
+        #        {attributeID: resource[attributeID]['value'].split(' | ')})
+        self.attributes = attributes
+
+
 @app.route('/prova')
 def prova():
 
@@ -48,7 +84,12 @@ def prova():
         data = json.load(f)
 
     data = structure_attributes_list(data)
-    return make_response(jsonify(data))
+    label = next(
+        (attribute['value'][0]['value'] for attribute in data if attribute['property']['uri'] == 'http://www.w3.org/2000/01/rdf-schema#label'), None)
+    comment = next(
+        (attribute['value'][0]['value'] for attribute in data if attribute['property']['uri'] == 'http://www.w3.org/2000/01/rdf-schema#comment'), None)
+    return make_response(jsonify({'data': data, 'label': label, 'comment': comment}))
+
 
 # Resource -> lista di proprietà della risorsa
 # Resource Attribute -> Una determinata attributo della risorsa contenente (URI proprietà e label se presente, lista di valori della proprietà,
@@ -65,6 +106,7 @@ class ResourceAttribute:
         self.ID = f'prop_{attribute_index}'
         self.property = {'uri': uri, 'label': label}
         self.show = False
+        self.isConstraint = False
         value_type = attribute['value']['type']
         value_datatype = attribute['value']['datatype'] if 'datatype' in attribute['value'] else None
         value = attribute['value']['value']
@@ -88,7 +130,7 @@ class AttributeValue:
             else:
                 self.comparison = 'type-based'
         else:
-            self.comparison = 'exactstring'
+            self.comparison = 'exact-string'
 
 
 # FUnziona che data una lista di attributi, modifica la struttura dati in cui sono memorizzati per poter effettuare azioni in frontend
@@ -185,21 +227,16 @@ def autocomplete_search():
     # ! Print per debug
     print(resource_type)
     print(search)
-    # Query che seleziona le prime n 10 risorse che hanno come sottostringa iniziale (del rdfs:label) quella inserita dall'utente
+    # In caso l'utente abbia scelto un rdf:type a cui deve appartenere la risorsa cercata viene inserito il vincolo nella query
+    additional_constraint = '' if resource_type == '' else f'?resource rdf:type <{resource_type}>.'
 
-    if resource_type is None or resource_type == "":
-        query = 'select distinct ?resource group_concat(distinct ?label; separator=" | ") as ?label where {'\
-                '?resource rdfs:label ?label.'\
-                'FILTER(LANGMATCHES(LANG(?label),"it") || LANGMATCHES(LANG(?label),"en") || LANG(?label) = "")'\
-                f'FILTER( REGEX(?label, "^{search}", "i") )'\
-                '}GROUP BY ?resource LIMIT 10'
-    else:
-        query = 'select distinct ?resource group_concat(distinct ?label; separator=" | ") as ?label where {'\
-                '?resource rdfs:label ?label.'\
-                f'?resource rdf:type <{resource_type}> .'\
-                'FILTER(LANGMATCHES(LANG(?label),"it") || LANGMATCHES(LANG(?label),"en") || LANG(?label) = "")'\
-                f'FILTER( REGEX(?label, "^{search}", "i") )'\
-                '}GROUP BY ?resource LIMIT 10'
+    # Query che seleziona le prime n 10 risorse che hanno come sottostringa iniziale (del rdfs:label) quella inserita dall'utente
+    query = 'select distinct ?resource group_concat(distinct ?label; separator=" | ") as ?label where {'\
+            '?resource rdfs:label ?label.'\
+            f'{additional_constraint}'\
+            'FILTER(LANGMATCHES(LANG(?label),"it") || LANGMATCHES(LANG(?label),"en") || LANG(?label) = "")'\
+            f'FILTER( REGEX(?label, "^{search}", "i") )'\
+            '}GROUP BY ?resource LIMIT 10'
 
     print(query)
     # results conterrà il risultato della query

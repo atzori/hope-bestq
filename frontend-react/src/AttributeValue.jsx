@@ -28,7 +28,7 @@ export default function AttributeValue(props) {
 		// Viene modificato il valore all'interno dell'oggetto che indica se si sta modificando il valore
 		props.value.editing = true;
 		// Viene utilizzata la funzione del parent che permette di applicare le modifiche
-		props.changeValue(props.value.ID, props.value);
+		props.changeValue(props.value.ID, props.value, undefined);
 		console.log(props.value);
 	}
 
@@ -62,24 +62,34 @@ export default function AttributeValue(props) {
 	function possibleComparison() {
 		if (type === "literal") {
 			return [
-				<option value="exactstring">Exact String</option>,
-				<option value="substring">Substring</option>,
+				<option key="exact-string" value="exact-string">
+					Exact String
+				</option>,
+				<option key="substring" value="substring">
+					Substring
+				</option>,
 			];
 		}
 		if (type === "uri") {
-			return [<option value="uri">URI</option>];
+			return [
+				<option key="uri" value="uri">
+					URI
+				</option>,
+			];
 		}
 		return [
-			<option value="type-based">
+			<option key="type-based" value="type-based">
 				Type based comparison (default equal)
 			</option>,
-			<option value="regex">Regex</option>,
+			<option key="regex" value="regex">
+				Regex
+			</option>,
 		];
 	}
 
 	function changeComparison(event) {
 		props.value.comparison = event.target.value;
-		props.changeValue(props.value.ID, props.value);
+		props.changeValue(props.value.ID, props.value, undefined);
 	}
 
 	function applyEdit() {
@@ -93,13 +103,13 @@ export default function AttributeValue(props) {
 			} else {
 				props.value.value = valueString;
 			}
-			props.changeValue(props.value.ID, props.value);
+			props.changeValue(props.value.ID, props.value, true);
 		}
 	}
 
 	function undoEdit() {
 		props.value.editing = false;
-		props.changeValue(props.value.ID, props.value);
+		props.changeValue(props.value.ID, props.value, undefined);
 	}
 	/* Se l'utente sta modificando il valore viene mostrato un form che permette la modifica e la selezione del tipo
 	   di confronto che vuole effettuare per la nuova query */
