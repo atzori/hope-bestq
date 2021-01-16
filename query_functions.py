@@ -9,6 +9,8 @@ def run_query(endpoint_URL, query, timeout):
     # Impostazione di defaultGraph (testato solo per DBPEDIA, trovare metodo per farlo funzionare in tutti)
     if endpoint_URL == "http://dbpedia.org/sparql":
         sparql.addDefaultGraph(endpoint_URL.replace('/sparql', ''))
+    elif endpoint_URL == "https://dati.camera.it/sparql":
+        sparql.addDefaultGraph("http://dati.camera.it/")
 
     # Viene impostato timeout di 30 secondi sulla query
     if timeout is not None or timeout != 0:
@@ -22,12 +24,13 @@ def run_query(endpoint_URL, query, timeout):
 
     try:
         response_data = sparql.query().convert()
+        print(response_data)
     except socket.timeout:
         response_data = "ERROR: Timeout superato"
     except Exception:
         response_data = "ERROR: Errore generico"
     finally:
-        return response_data
+        return response_data if type(response_data) is not str and response_data['results']['bindings'] != [] else "Nessun Risultato"
 
 
 def get_value_and_operator(attribute_value):
@@ -51,18 +54,20 @@ def create_type_based_comparison(attribute_value, value, operatore):
     # http://www.w3.org/2001/XMLSchema#date potrebbe non funzionare
     value_datatype = attribute_value['datatype']
     value_id = attribute_value['ID']
+
+    value_id_label = f'{value_id}_label' if attribute_value['label'] != None else None
     numeric_datatypes = None
 
     with open('./numericDatatypes.json') as datatypes:
         numeric_datatypes = json.load(datatypes)
 
     if attribute_value['datatype'] in numeric_datatypes:
-        return f'?{value_id} {operatore} "{value}"^^<{value_datatype}> '
+        return f'?{value_id_label or value_id} {operatore} "{value}"^^<{value_datatype}> '
     else:
-        return f'xsd:double(?{value_id}) {operatore} {value} '
+        return f'xsd:double(?{value_id_label or value_id}) {operatore} {value} '
 
 
-def user_query(constraints, resource_type, endpoint_URL, language):
+def user_query(constraints, endpoint_URL, language):
     query_select = ''
     query_body = ''
     query_filter = ''
@@ -78,7 +83,11 @@ def user_query(constraints, resource_type, endpoint_URL, language):
 
             query_body += f'<{property_uri}> ?{attribute_id} {terminatore_stringa}'
             query_select += f' group_concat(distinct ?{attribute_id}; separator=" | ") as ?{attribute_id} '
-            attribute_to_show.append(attribute_id)
+
+            # il valore dell'uri dell'attributo o del label se presente:
+            attribute_uri_or_label = attribute['property']['label'] or property_uri
+            attribute_to_show.append(
+                {'ID': attribute_id, 'attribute': attribute_uri_or_label})
 
         for attribute_value in attribute['value']:
 
@@ -86,21 +95,30 @@ def user_query(constraints, resource_type, endpoint_URL, language):
                 -1] and attribute_value == attribute['value'][-1] else '; '
 
             value_id = attribute_value['ID']
+            value_id_label = f'{value_id}_label' if attribute_value['label'] != None else None
             comparison = attribute_value['comparison']
 
             # Utilizzando l'apposita funzione viene salvato l'operatore di confronto e il valore
             value, operatore = get_value_and_operator(attribute_value)
 
-            query_body += f'<{property_uri}> ?{value_id}{terminatore_stringa}'
+            if query_body != "" and query_body[-2] == '.':
+                query_body += f'?resource <{property_uri}> ?{value_id}{terminatore_stringa}'
+            else:
+                query_body += f'<{property_uri}> ?{value_id}{terminatore_stringa}'
+
+            if value_id_label != None:
+                query_body += f'?{value_id} rdfs:label ?{value_id_label}. '
 
             if comparison == 'uri':
-                query_filter += f'?{value_id} = <{value}> '
+                query_filter += f'?{value_id_label or value_id} = <{value}> '
 
             elif comparison == 'exact-string':
-                query_filter += f'regex(?{value_id}, "^{value}$") '  # , "i"
+                # , "i"
+                query_filter += f'regex(?{value_id_label or value_id}, "^{value}$") '
                 #query_filter += f'?{value_id} = {value} '
             elif comparison == 'substring':
-                query_filter += f'regex(?{value_id}, "{value}") '  # , "i"
+                # , "i"
+                query_filter += f'regex(?{value_id_label or value_id}, "{value}") '
             elif comparison == 'type-based':
                 query_filter += create_type_based_comparison(
                     attribute_value, value, operatore)
@@ -121,7 +139,8 @@ def user_query(constraints, resource_type, endpoint_URL, language):
 
     all_filter = '' if query_filter == '' else f'FILTER ({query_filter})'
 
-    query = f'SELECT ?resource (SAMPLE(?comment)AS ?comment) (SAMPLE(?label)AS ?label) (SAMPLE(?thumbnail)AS ?thumbnail) {query_select}'\
+    query = 'PREFIX dbo: <http://dbpedia.org/ontology/> '\
+            f'SELECT ?resource (SAMPLE(?comment)AS ?comment) (SAMPLE(?label)AS ?label) (SAMPLE(?thumbnail)AS ?thumbnail) {query_select}'\
             f'WHERE {{?resource ?attribute ?value; {query_body}'\
             f'OPTIONAL {{ ?resource rdfs:comment ?comment FILTER (LANGMATCHES(LANG(?comment),"{language}") || LANG(?comment)="" )}}'\
             'OPTIONAL { ?resource dbo:thumbnail ?thumbnail }'\

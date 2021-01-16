@@ -23,14 +23,6 @@ export default function AttributeValue(props) {
 			return "literal";
 		}
 	}
-	// Funzione che rende modificabile il valore dell'attributo scelto dall'utente
-	function editButtonHandler() {
-		// Viene modificato il valore all'interno dell'oggetto che indica se si sta modificando il valore
-		props.value.editing = true;
-		// Viene utilizzata la funzione del parent che permette di applicare le modifiche
-		props.changeValue(props.value.ID, props.value, undefined);
-		console.log(props.value);
-	}
 
 	// Funzione che si occupa della modifica dei valori delle propietà da parte dell'utente
 	function changeValueHandler(event) {
@@ -87,6 +79,15 @@ export default function AttributeValue(props) {
 		];
 	}
 
+	// Funzione che rende modificabile il valore dell'attributo scelto dall'utente
+	function editButtonHandler() {
+		// Viene modificato il valore all'interno dell'oggetto che indica se si sta modificando il valore
+		props.value.editing = true;
+		// Viene utilizzata la funzione del parent che permette di applicare le modifiche
+		props.changeValue(props.value.ID, props.value, undefined);
+		console.log(props.value);
+	}
+
 	function changeComparison(event) {
 		props.value.comparison = event.target.value;
 		props.changeValue(props.value.ID, props.value, undefined);
@@ -110,6 +111,11 @@ export default function AttributeValue(props) {
 	function undoEdit() {
 		props.value.editing = false;
 		props.changeValue(props.value.ID, props.value, undefined);
+	}
+
+	function removeConstraint() {
+		props.value.edited = false;
+		props.changeValue(props.value.ID, props.value, false);
 	}
 	/* Se l'utente sta modificando il valore viene mostrato un form che permette la modifica e la selezione del tipo
 	   di confronto che vuole effettuare per la nuova query */
@@ -176,7 +182,7 @@ export default function AttributeValue(props) {
 	) : (
 		<li className={props.value.edited ? "modified" : "non-modified"}>
 			{props.value.label ? props.value.label : props.value.value}
-			<span id="editButtonSpan">
+			<span className="editButtonSpan">
 				[
 				<button
 					className="editButton"
@@ -187,6 +193,19 @@ export default function AttributeValue(props) {
 				</button>
 				]
 			</span>
+			{props.value.edited && (
+				<span className="editButtonSpan">
+					[
+					<button
+						id="annulla"
+						className="editButton"
+						onClick={removeConstraint}
+					>
+						Remove
+					</button>
+					]
+				</span>
+			)}
 		</li>
 	);
 }

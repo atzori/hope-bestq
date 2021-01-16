@@ -32,7 +32,18 @@ export default function Attribute(props) {
 	function changeValue(valueID, newValue, isConstraint) {
 		const aux = props.attribute;
 		if (isConstraint !== undefined) {
-			aux.isConstraint = isConstraint;
+			if (!isConstraint) {
+				if (!aux.show) {
+					const modifiedValues = aux.value.filter(
+						(value) => value.edited
+					);
+					aux.isConstraint = modifiedValues.length > 0;
+				} else {
+					aux.isConstraint = true;
+				}
+			} else {
+				aux.isConstraint = isConstraint;
+			}
 		}
 		const indexOfProp = aux.value.findIndex(
 			(value) => value.ID === valueID

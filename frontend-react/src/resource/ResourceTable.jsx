@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 import Table from "react-bootstrap/Table";
@@ -37,6 +38,7 @@ export default function ResourceTable(props) {
 		// Viene inserito l'elemento nella nuova posizione
 		props.resource.splice(destination.index, 0, droppedElement);
 		console.log(droppedElement, destination.index);
+		/*
 		console.log(
 			"elemento precedente : ",
 			props.resource[destination.index - 1]
@@ -45,6 +47,15 @@ export default function ResourceTable(props) {
 			"elemento successivo : ",
 			props.resource[destination.index + 1]
 		);
+		*/
+		axios
+			.post("/save_order", {
+				selected: props.resource[destination.index].property.uri,
+				prev: props.resource[destination.index - 1].property.uri,
+				next: props.resource[destination.index + 1].property.uri,
+			})
+			.then((response) => console.log(response))
+			.catch((error) => console.log(error));
 	}
 
 	return (

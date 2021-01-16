@@ -18,5 +18,6 @@
 	"http://www.w3.org/2001/XMLSchema#unsignedShort",
 	"http://www.w3.org/2001/XMLSchema#unsignedByte",
 	"http://www.w3.org/2001/XMLSchema#positiveInteger",
-	"http://www.w3.org/2001/XMLSchema#date"
+	"http://www.w3.org/2001/XMLSchema#date",
+	"http://www.w3.org/2001/XMLSchema#gYear"
 ]

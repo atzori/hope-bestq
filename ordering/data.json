@@ -1,0 +1,14 @@
+{
+    "http://dbpedia.org/ontology/Person/weight": {
+        "next": "http://dbpedia.org/ontology/league",
+        "prev": "http://dbpedia.org/ontology/height"
+    },
+    "http://dbpedia.org/ontology/areaTotal": {
+        "next": "http://dbpedia.org/ontology/areaCode",
+        "prev": "http://dbpedia.org/ontology/PopulatedPlace/areaTotal"
+    },
+    "http://dbpedia.org/ontology/elevation": {
+        "next": "http://dbpedia.org/ontology/isPartOf",
+        "prev": "http://dbpedia.org/ontology/governmentType"
+    }
+}

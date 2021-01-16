@@ -13,7 +13,6 @@ $md-width: 768px;
 html,
 body {
 	background-color: $background;
-	height: 100%;
 }
 
 #navbar {
@@ -38,6 +37,10 @@ body {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+a.nav-item.nav-link.active {
+	font-weight: bold;
 }
 
 #resource-table {
@@ -116,9 +119,6 @@ body {
 		margin-top: auto;
 		margin-bottom: auto;
 	}
-	.editButtonSpan {
-		float: right;
-	}
 }
 
 .modified {
@@ -127,7 +127,7 @@ body {
 	font-size: 1.2em;
 }
 
-#editButtonSpan {
+.editButtonSpan {
 	font-weight: normal;
 	color: black;
 	margin-left: 10px;
@@ -159,7 +159,7 @@ body {
 }
 
 .resource-preview {
-	margin: 10px 0;
+	margin: 10px auto;
 	border: 1px solid #007cc740;
 	border-radius: 15px;
 	&:hover {
@@ -176,5 +176,20 @@ body {
 		font-weight: light;
 		text-align: right;
 		color: #aaa;
+	}
+}
+
+#loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 99;
+	background-color: #12232e60;
+	display: flex;
+	justify-content: center;
+	img {
+		width: 10%;
 	}
 }

@@ -164,7 +164,7 @@ export default function SearchForm(props) {
 					}
 				>
 					<p>
-						{el.label.value[0]}
+						{el.label.value}
 						<span>{el.resource.value}</span>
 					</p>
 				</li>
@@ -220,7 +220,7 @@ export default function SearchForm(props) {
 							))}
 						</Dropdown.Menu>
 					</Dropdown>
-					{props.endpointTypes !== [] && (
+					{props.endpointLoading && (
 						<Spinner animation="border" role="status">
 							<span className="sr-only">Loading...</span>
 						</Spinner>

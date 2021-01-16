@@ -11,7 +11,7 @@ import EndpointSelection from "./EndpointSelection";
 import SearchForm from "./SearchForm";
 import SearchResults from "./SearchResults";
 
-function App() {
+export default function Home() {
 	// Stato che conterrà il lingua scelta dall'utente
 	const [language, setLanguage] = useState(
 		sessionStorage.getItem("language") || "it"
@@ -23,17 +23,26 @@ function App() {
 
 	// Stato che conterrà gli rdf:type delle risorse presenti nell'endpoint inserito dall'utente
 	const [endpointTypes, setEndpointTypes] = useState([]);
+	const [endpointLoading, setEndpointLoading] = useState(false);
 
 	const [resourcesList, setResourcesList] = useState([]);
 
 	// Funzione che tramite chiamata all'api ottiene gli rdf:type dell'endpoint inserito dall'utente e li salva nello stato.
 	async function getEndpointTypes(endpointUrl) {
 		setEndpointTypes([]);
+		setEndpointLoading(true);
 		await axios
 			.get(`/get_types?endpoint=${endpointUrl}`)
 			.then((response) => {
 				console.log(response.data);
+				setEndpointLoading(false);
 				setEndpointTypes(response.data);
+			})
+			.catch((error) => {
+				console.log(
+					"Errore nel caricamento dei tipi dell'endpoint:" + error
+				);
+				setEndpointLoading(false);
 			});
 	}
 	// Quando viene caricata la pagine vengono caricati i dati presenti nel sessionStorage in caso siano già stati salvati altrimenti vengono impostati i valori di default
@@ -70,6 +79,7 @@ function App() {
 				language={language}
 				endpointUrl={endpointUrl}
 				endpointTypes={endpointTypes}
+				endpointLoading={endpointLoading}
 				setResourcesList={setResourcesList}
 			/>
 			{resourcesList.length > 0 && (
@@ -82,5 +92,3 @@ function App() {
 		</Container>
 	);
 }
-
-export default App;

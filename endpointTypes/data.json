@@ -1,4 +1,1573 @@
 {
+    "a": [
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "voto del deputato in una votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/voto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atti di indirizzo e controllo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/aic"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "intervento in una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/intervento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/discussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "dibattito"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/dibattito"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/atto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "seduta"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/seduta"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/votazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assegnazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assegnazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "stato iter"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/statoIter"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "risposta scritta alle interrogazioni"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/rispostaAIC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "relatore di un atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/relatore"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Person"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/Person"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "doc"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/DOC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "deputato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/deputato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "allegato ad una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/allegatoDiscussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legge"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legge"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "versione testo atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/versioneTestoAtto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "elezione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/elezione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "ufficio Parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/ufficioParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "bollettino"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/bollettino"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "autore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/autore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoSenato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "senatore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/senatore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "membro di Governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/membroGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "cronologia"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/cronologia"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "richiesta parere"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/richiestaParere"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "post"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/post"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "incarico"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/incarico"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo governativo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organoGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "luogo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/luogo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "abbinamento"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/abbinamento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "trasmissione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/trasmissione"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Online Account"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/OnlineAccount"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "gruppo parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/gruppoParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/governo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente del Consiglio dei ministri"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteConsiglioMinistri"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "componente del Gruppo Misto"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/componenteGruppoMisto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Camera dei deputati"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assemblea"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assemblea"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sessione legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sessioneLegislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sistema elettorale"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sistemaElettorale"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Repubblica"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteRepubblica"
+            }
+        },
+        {
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2000/01/rdf-schema#Class"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "natura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/natura"
+            }
+        }
+    ],
+    "b": [
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "voto del deputato in una votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/voto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atti di indirizzo e controllo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/aic"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "intervento in una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/intervento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/discussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "dibattito"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/dibattito"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/atto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "seduta"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/seduta"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/votazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assegnazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assegnazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "stato iter"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/statoIter"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "risposta scritta alle interrogazioni"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/rispostaAIC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "relatore di un atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/relatore"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Person"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/Person"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "doc"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/DOC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "deputato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/deputato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "allegato ad una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/allegatoDiscussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legge"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legge"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "versione testo atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/versioneTestoAtto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "elezione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/elezione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "ufficio Parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/ufficioParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "bollettino"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/bollettino"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "autore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/autore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoSenato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "senatore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/senatore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "membro di Governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/membroGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "cronologia"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/cronologia"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "richiesta parere"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/richiestaParere"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "post"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/post"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "incarico"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/incarico"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo governativo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organoGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "luogo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/luogo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "abbinamento"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/abbinamento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "trasmissione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/trasmissione"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Online Account"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/OnlineAccount"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "gruppo parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/gruppoParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/governo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente del Consiglio dei ministri"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteConsiglioMinistri"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "componente del Gruppo Misto"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/componenteGruppoMisto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Camera dei deputati"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assemblea"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assemblea"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sessione legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sessioneLegislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sistema elettorale"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sistemaElettorale"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Repubblica"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteRepubblica"
+            }
+        },
+        {
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2000/01/rdf-schema#Class"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "natura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/natura"
+            }
+        }
+    ],
+    "http://dati.camera.it/sparql": [
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "voto del deputato in una votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/voto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atti di indirizzo e controllo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/aic"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "intervento in una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/intervento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/discussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "dibattito"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/dibattito"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/atto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "seduta"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/seduta"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/votazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assegnazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assegnazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "stato iter"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/statoIter"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "risposta scritta alle interrogazioni"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/rispostaAIC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "relatore di un atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/relatore"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Person"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/Person"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "doc"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/DOC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "deputato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/deputato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "allegato ad una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/allegatoDiscussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legge"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legge"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "versione testo atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/versioneTestoAtto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "elezione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/elezione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "ufficio Parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/ufficioParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "bollettino"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/bollettino"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "autore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/autore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoSenato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "senatore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/senatore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "membro di Governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/membroGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "cronologia"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/cronologia"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "richiesta parere"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/richiestaParere"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "post"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/post"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "incarico"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/incarico"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo governativo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organoGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "luogo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/luogo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "abbinamento"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/abbinamento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "trasmissione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/trasmissione"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Online Account"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/OnlineAccount"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "gruppo parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/gruppoParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/governo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente del Consiglio dei ministri"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteConsiglioMinistri"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "componente del Gruppo Misto"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/componenteGruppoMisto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Camera dei deputati"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assemblea"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assemblea"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sessione legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sessioneLegislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sistema elettorale"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sistemaElettorale"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Repubblica"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteRepubblica"
+            }
+        },
+        {
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2000/01/rdf-schema#Class"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "natura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/natura"
+            }
+        }
+    ],
     "http://dati.senato.it/sparql": [
         {
             "label": {
@@ -48,6 +1617,1052 @@
             "type": {
                 "type": "uri",
                 "value": "http://www.w3.org/2002/07/owl#Ontology"
+            }
+        }
+    ],
+    "http://dbpedia.or": [
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "voto del deputato in una votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/voto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atti di indirizzo e controllo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/aic"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "intervento in una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/intervento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/discussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "dibattito"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/dibattito"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/atto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "seduta"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/seduta"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/votazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assegnazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assegnazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "stato iter"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/statoIter"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "risposta scritta alle interrogazioni"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/rispostaAIC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "relatore di un atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/relatore"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Person"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/Person"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "doc"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/DOC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "deputato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/deputato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "allegato ad una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/allegatoDiscussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legge"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legge"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "versione testo atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/versioneTestoAtto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "elezione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/elezione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "ufficio Parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/ufficioParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "bollettino"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/bollettino"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "autore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/autore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoSenato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "senatore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/senatore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "membro di Governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/membroGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "cronologia"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/cronologia"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "richiesta parere"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/richiestaParere"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "post"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/post"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "incarico"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/incarico"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo governativo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organoGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "luogo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/luogo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "abbinamento"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/abbinamento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "trasmissione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/trasmissione"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Online Account"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/OnlineAccount"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "gruppo parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/gruppoParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/governo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente del Consiglio dei ministri"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteConsiglioMinistri"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "componente del Gruppo Misto"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/componenteGruppoMisto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Camera dei deputati"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assemblea"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assemblea"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sessione legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sessioneLegislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sistema elettorale"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sistemaElettorale"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Repubblica"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteRepubblica"
+            }
+        },
+        {
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2000/01/rdf-schema#Class"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "natura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/natura"
+            }
+        }
+    ],
+    "http://dbpedia.org": [
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "voto del deputato in una votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/voto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atti di indirizzo e controllo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/aic"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "intervento in una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/intervento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/discussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "dibattito"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/dibattito"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/atto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "seduta"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/seduta"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "votazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/votazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assegnazione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assegnazione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "stato iter"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/statoIter"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "risposta scritta alle interrogazioni"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/rispostaAIC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "relatore di un atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/relatore"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Person"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/Person"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "doc"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/DOC"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "deputato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/deputato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "allegato ad una discussione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/allegatoDiscussione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legge"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legge"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "versione testo atto camera"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/versioneTestoAtto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "elezione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/elezione"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "ufficio Parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/ufficioParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "bollettino"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/bollettino"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "autore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/autore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "mandato"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/mandatoSenato"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "senatore"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/senatore"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "membro di Governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/membroGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "cronologia"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/cronologia"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "richiesta parere"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/richiestaParere"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "post"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/post"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "incarico"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/incarico"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo governativo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organoGoverno"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "organo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/organo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "luogo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/luogo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "abbinamento"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/abbinamento"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "trasmissione"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/trasmissione"
+            }
+        },
+        {
+            "label": {
+                "type": "literal",
+                "value": "Online Account"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://xmlns.com/foaf/0.1/OnlineAccount"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "gruppo parlamentare"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/gruppoParlamentare"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "governo"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/governo"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente del Consiglio dei ministri"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteConsiglioMinistri"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "componente del Gruppo Misto"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/componenteGruppoMisto"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Camera dei deputati"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteCamera"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "assemblea"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/assemblea"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/legislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sessione legislatura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sessioneLegislatura"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "sistema elettorale"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/sistemaElettorale"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "presidente della Repubblica"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/presidenteRepubblica"
+            }
+        },
+        {
+            "type": {
+                "type": "uri",
+                "value": "http://www.w3.org/2000/01/rdf-schema#Class"
+            }
+        },
+        {
+            "label": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#string",
+                "type": "typed-literal",
+                "value": "natura"
+            },
+            "type": {
+                "type": "uri",
+                "value": "http://dati.camera.it/ocd/natura"
             }
         }
     ],
@@ -5187,529 +7802,6 @@
             "type": {
                 "type": "uri",
                 "value": "http://dbpedia.org/ontology/Singer"
-            }
-        }
-    ],
-    "https://dati.camera.it/sparql": [
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "voto del deputato in una votazione"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/voto"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "atti di indirizzo e controllo"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/aic"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "intervento in una discussione"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/intervento"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "discussione"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/discussione"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "dibattito"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/dibattito"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "atto camera"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/atto"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "seduta"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/seduta"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "votazione"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/votazione"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "assegnazione"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/assegnazione"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "stato iter"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/statoIter"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "risposta scritta alle interrogazioni"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/rispostaAIC"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "relatore di un atto camera"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/relatore"
-            }
-        },
-        {
-            "label": {
-                "type": "literal",
-                "value": "Person"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://xmlns.com/foaf/0.1/Person"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "doc"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/DOC"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "mandato"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/mandatoCamera"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "deputato"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/deputato"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "allegato ad una discussione"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/allegatoDiscussione"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "legge"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/legge"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "versione testo atto camera"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/versioneTestoAtto"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "elezione"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/elezione"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "ufficio Parlamentare"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/ufficioParlamentare"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "bollettino"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/bollettino"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "autore"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/autore"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "mandato"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/mandatoSenato"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "senatore"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/senatore"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "membro di Governo"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/membroGoverno"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "cronologia"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/cronologia"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "richiesta parere"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/richiestaParere"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "post"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/post"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "incarico"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/incarico"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "organo governativo"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/organoGoverno"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "organo"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/organo"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "luogo"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/luogo"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "abbinamento"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/abbinamento"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "trasmissione"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/trasmissione"
-            }
-        },
-        {
-            "label": {
-                "type": "literal",
-                "value": "Online Account"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://xmlns.com/foaf/0.1/OnlineAccount"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "gruppo parlamentare"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/gruppoParlamentare"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "governo"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/governo"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "presidente del Consiglio dei ministri"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/presidenteConsiglioMinistri"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "componente del Gruppo Misto"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/componenteGruppoMisto"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "presidente della Camera dei deputati"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/presidenteCamera"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "assemblea"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/assemblea"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "legislatura"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/legislatura"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "sessione legislatura"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/sessioneLegislatura"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "sistema elettorale"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/sistemaElettorale"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "presidente della Repubblica"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/presidenteRepubblica"
-            }
-        },
-        {
-            "type": {
-                "type": "uri",
-                "value": "http://www.w3.org/2000/01/rdf-schema#Class"
-            }
-        },
-        {
-            "label": {
-                "datatype": "http://www.w3.org/2001/XMLSchema#string",
-                "type": "typed-literal",
-                "value": "natura"
-            },
-            "type": {
-                "type": "uri",
-                "value": "http://dati.camera.it/ocd/natura"
             }
         }
     ]
