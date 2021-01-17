@@ -16,85 +16,7 @@ def home():
     return render_template('homepage/index.html')
 
 
-@app.route('/resource', methods=['GET'])
-def search_by_uri():
-    app.static_folder = 'ReactBuilds/resource/static'
-    endpoint = request.args.get('endpoint')
-    language = request.args.get('language')
-    resource_uri = request.args.get('uri')
-
-    query = 'select distinct ?propertyURI ?propertyLabel ?value ?valueLabel where {' \
-        f'<{resource_uri}> ?propertyURI ?value.' \
-        'OPTIONAL{?propertyURI rdfs:label ?propertyLabel. FILTER( (LANGMATCHES(LANG(?propertyLabel), "en") || LANG(?propertyLabel)="") ) }' \
-        f'OPTIONAL{{?value rdfs:label ?valueLabel FILTER( LANGMATCHES(LANG(?valueLabel),"{language}") || LANG(?valueLabel)="" ) }}'\
-        f'FILTER( LANGMATCHES(LANG(?value),"{language}") || LANG(?value)="" || !isLiteral(?value))' \
-        '} GROUP BY ?propertyURI ?propertyLabel ORDER BY ?propertyURI'
-    query_result = run_query(endpoint, query, 0)
-    print(query_result)
-    if type(query_result) is not str:
-
-        resource = structure_attributes_list(
-            query_result['results']['bindings'])
-        print(resource)
-
-        label = next(
-            (attribute['value'][0]['value'] for attribute in resource if attribute['property']['uri'] == 'http://www.w3.org/2000/01/rdf-schema#label'), None)
-        comment = next(
-            (attribute['value'][0]['value'] for attribute in resource if attribute['property']['uri'] == 'http://www.w3.org/2000/01/rdf-schema#comment'), None)
-
-        return render_template('resource/index.html', resource={'requestedResource': resource, 'label': label, 'comment': comment, 'language': language, 'endpoint': endpoint})
-    else:
-        return redirect_home
-
-
-@app.route('/query', methods=['POST'])
-def query():
-    req = request.get_json()
-    endpoint_URL = req['endpointUrl']
-    language = req['language']
-    constraints = req['constraints']
-
-    print(constraints)
-    query_result, attribute_to_show = user_query(
-        constraints, endpoint_URL, language)
-
-    if type(query_result) is not str:
-        resources = query_result['results']['bindings'] or None
-        resources = [vars(ResourcePreview(resource, attribute_to_show, index))
-                     for index, resource in enumerate(resources)]
-        return make_response(jsonify(resources))
-    else:
-        if query_result == "Nessun Risultato":
-            return make_response("Nessun risultato trovato", 404)
-        else:
-            return make_response(jsonify(query_result), 408)
-
-
-@app.route('/save_order', methods=['POST'])
-def save_user_order():
-    req = request.get_json()
-
-    element = req['selected']
-    prev_element = req['prev']
-    next_element = req['next']
-
-    order = {element: {'prev': prev_element, 'next': next_element}}
-
-    my_file = Path('./ordering/data.json')
-    data = {}
-
-    if my_file.exists():
-        with open(my_file) as f:
-            data = json.load(f)
-
-    data.update(order)
-
-    with open(my_file, 'w') as outfile:
-        json.dump(data, outfile, indent=4)
-
-    return make_response("OK", 201)
-
-
+# API che restituisce gli rdf:type di risorse presenti nell'endpoint selezionato ordinati in base al numero di risorse presenti con tale rdf:type
 @app.route('/get_types', methods=['GET'])
 def get_endpoint_types():
     # Salvo l'endpoint su cui eseguire la query inserito nella GET request.
@@ -249,6 +171,99 @@ def search_by_label():
         return make_response(jsonify(results), 408)
 
 
+# route per la visualizzazione di una risorsa, tramite una get request vengono inviati: l'endpoint su cui fare la ricarca, l'uri della risorsa cercata e la lingua per i risultati
+@app.route('/resource', methods=['GET'])
+def search_by_uri():
+    app.static_folder = 'ReactBuilds/resource/static'
+    endpoint = request.args.get('endpoint')
+    language = request.args.get('language')
+    resource_uri = request.args.get('uri')
+
+    query = 'select distinct ?propertyURI ?propertyLabel ?value ?valueLabel where {' \
+        f'<{resource_uri}> ?propertyURI ?value.' \
+        'OPTIONAL{?propertyURI rdfs:label ?propertyLabel. FILTER( (LANGMATCHES(LANG(?propertyLabel), "en") || LANG(?propertyLabel)="") ) }' \
+        f'OPTIONAL{{?value rdfs:label ?valueLabel FILTER( LANGMATCHES(LANG(?valueLabel),"{language}") || LANG(?valueLabel)="" ) }}'\
+        f'FILTER( LANGMATCHES(LANG(?value),"{language}") || LANG(?value)="" || !isLiteral(?value))' \
+        '} GROUP BY ?propertyURI ?propertyLabel ORDER BY ?propertyURI'
+    query_result = run_query(endpoint, query, 0)
+    print(query_result)
+    if type(query_result) is not str:
+
+        resource = structure_attributes_list(
+            query_result['results']['bindings'])
+        #!DEBUG
+        print(resource)
+        resource = sort_attribute_list(resource)
+
+        label = next(
+            (attribute['value'][0]['value'] for attribute in resource if attribute['property']['uri'] == 'http://www.w3.org/2000/01/rdf-schema#label'), None)
+        comment = next(
+            (attribute['value'][0]['value'] for attribute in resource if attribute['property']['uri'] == 'http://www.w3.org/2000/01/rdf-schema#comment'), None)
+
+        return render_template('resource/index.html', resource={'requestedResource': resource, 'label': label, 'comment': comment, 'language': language, 'endpoint': endpoint})
+    else:
+        return redirect_home
+
+
+# API per l'esecuzione della query con i vincoli posti dall'utente
+@app.route('/query', methods=['POST'])
+def query():
+    req = request.get_json()
+    endpoint_URL = req['endpointUrl']
+    language = req['language']
+    constraints = req['constraints']
+
+    print(constraints)
+    query_result, attribute_to_show = user_query(
+        constraints, endpoint_URL, language)
+
+    if type(query_result) is not str:
+        resources = query_result['results']['bindings'] or None
+        resources = [vars(ResourcePreview(resource, attribute_to_show, index))
+                     for index, resource in enumerate(resources)]
+        return make_response(jsonify(resources))
+    else:
+        if query_result == "Nessun Risultato":
+            return make_response("Nessun risultato trovato", 404)
+        else:
+            return make_response(jsonify(query_result), 408)
+
+
+# API per il salvataggio dell'ordine scelto dall'utente per la visualizzazione degli attributi
+@app.route('/save_order', methods=['POST'])
+def save_user_order():
+    req = request.get_json()
+    # Salvataggio dell'ordinamento tramite: "attributo modificato di posizione", "attributo precedente", "attributo successivo"
+    """
+    element = req['selected']
+    prev_element = req['prev']
+    next_element = req['next']
+
+    order = {element: {'prev': prev_element, 'next': next_element}}
+
+    my_file = Path('./sortData/data.json')
+    data = {}
+
+    if my_file.exists():
+        with open(my_file) as f:
+            data = json.load(f)
+
+    data.update(order)
+
+    with open(my_file, 'w') as outfile:
+        json.dump(data, outfile, indent=4)
+    """
+    # Salvataggio dell'ordinamento attraverso il salvataggio della lista completa degli attributi in ordine
+    attribute_list = req['attributes']
+    my_file = Path('./sortData/data.json')
+
+    with open(my_file, 'w') as outfile:
+        json.dump(attribute_list, outfile, indent=4)
+
+    return make_response("OK", 201)
+
+
+# API DI DEBUG PER L'ESECUZIONE DELLA PAGINA NON BUILDATA RESOURCE
 @app.route('/prova')
 def prova():
 
@@ -256,6 +271,8 @@ def prova():
         data = json.load(f)
 
     data = structure_attributes_list(data)
+    data = sort_attribute_list(data)
+
     label = next(
         (attribute['value'][0]['value'] for attribute in data if attribute['property']['uri'] == 'http://www.w3.org/2000/01/rdf-schema#label'), None)
     comment = next(
@@ -263,8 +280,7 @@ def prova():
     return make_response(jsonify({'data': data, 'label': label, 'comment': comment}))
 
 
-# FUnziona che data una lista di attributi, modifica la struttura dati in cui sono memorizzati per poter effettuare azioni in frontend
-# @app.route("/prova")
+# FUnzione che data una lista di attributi, modifica la struttura dati in cui sono memorizzati per poter effettuare azioni in frontend
 def structure_attributes_list(attributes_list):
     # LETTURA DA FILE PER DEBUGGING
     # with open('./prova.json') as f:
@@ -295,8 +311,20 @@ def structure_attributes_list(attributes_list):
             # Viene inserito l'attributo nella lista che verrà restituita
             structured_attributes_list.append(attribute)
 
-    # return jsonify(structured_attributes_list)
     return structured_attributes_list
+
+
+def sort_attribute_list(attribute_list):
+    my_file = Path('./sortData/data.json')
+
+    if my_file.exists():
+        with open(my_file) as f:
+            sorted_attributes = json.load(f)
+
+        attribute_list.sort(key=lambda x: sorted_attributes.index(
+            x['property']['uri']) if x['property']['uri'] in sorted_attributes else len(sorted_attributes))
+
+    return attribute_list
 
 
 class ResourcePreview:

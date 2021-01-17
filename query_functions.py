@@ -114,11 +114,11 @@ def user_query(constraints, endpoint_URL, language):
 
             elif comparison == 'exact-string':
                 # , "i"
-                query_filter += f'regex(?{value_id_label or value_id}, "^{value}$") '
+                query_filter += f'regex(str(?{value_id_label or value_id}), "^{value}$") '
                 #query_filter += f'?{value_id} = {value} '
             elif comparison == 'substring':
                 # , "i"
-                query_filter += f'regex(?{value_id_label or value_id}, "{value}") '
+                query_filter += f'regex(str(?{value_id_label or value_id}), "{value}") '
             elif comparison == 'type-based':
                 query_filter += create_type_based_comparison(
                     attribute_value, value, operatore)

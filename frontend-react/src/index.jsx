@@ -8,7 +8,13 @@ import ResourcePage from "./resource/ResourcePage";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<ResourcePage
+			requestedResource={window.resource.requestedResource}
+			label={window.resource.label}
+			comment={window.resource.comment}
+			language={window.resource.language}
+			endpoint={window.resource.endpoint}
+		/>
 	</React.StrictMode>,
 	document.getElementById("root")
 );

@@ -48,11 +48,28 @@ export default function ResourceTable(props) {
 			props.resource[destination.index + 1]
 		);
 		*/
+		//chiamata all'api che salva l'ordine degli attributi attraverso attributo modificato di ordine, attributo precedente e successvo
+		// Da definire
+		/*
 		axios
 			.post("/save_order", {
 				selected: props.resource[destination.index].property.uri,
 				prev: props.resource[destination.index - 1].property.uri,
 				next: props.resource[destination.index + 1].property.uri,
+
+			})
+			.then((response) => console.log(response))
+			.catch((error) => console.log(error));
+		*/
+		// Chiamata all'api che salva l'ordine degli attributi inviando l'intera lista di attributi della risorsa
+		const attributes = props.resource.map(
+			(attribute) => attribute.property.uri
+		);
+		console.log(attributes);
+
+		axios
+			.post("/save_order", {
+				attributes: attributes,
 			})
 			.then((response) => console.log(response))
 			.catch((error) => console.log(error));

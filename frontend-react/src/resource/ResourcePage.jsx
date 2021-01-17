@@ -45,7 +45,7 @@ export default function ResourcePage({
 
 	useEffect(getResource, []);
 	*/
-	async function prova() {
+	async function query() {
 		/*
 		*Copia più lenta
 		console.time("json copy");
@@ -156,7 +156,7 @@ export default function ResourcePage({
 								effettuare una query clicca il tasto QUERY
 								presente sulla destra
 							</p>
-							<Button variant="success" size="lg" onClick={prova}>
+							<Button variant="success" size="lg" onClick={query}>
 								Esegui Query
 							</Button>
 						</Container>
