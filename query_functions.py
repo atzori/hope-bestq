@@ -140,15 +140,15 @@ def user_query(constraints, endpoint_URL, language):
     all_filter = '' if query_filter == '' else f'FILTER ({query_filter})'
 
     query = 'PREFIX dbo: <http://dbpedia.org/ontology/> '\
-            f'SELECT ?resource (SAMPLE(?comment)AS ?comment) (SAMPLE(?label)AS ?label) (SAMPLE(?thumbnail)AS ?thumbnail) {query_select}'\
-            f'WHERE {{?resource ?attribute ?value; {query_body}'\
-            f'OPTIONAL {{ ?resource rdfs:comment ?comment FILTER (LANGMATCHES(LANG(?comment),"{language}") || LANG(?comment)="" )}}'\
-            'OPTIONAL { ?resource dbo:thumbnail ?thumbnail }'\
-            'OPTIONAL { ?resource rdfs:label ?label FILTER( LANGMATCHES(LANG(?label),"en") || LANG(?label)="") }'\
-            f'{all_filter} }} GROUP BY ?resource LIMIT 25'\
+            f'SELECT ?resource (SAMPLE(?comment)AS ?comment) (SAMPLE(?label)AS ?label) (SAMPLE(?thumbnail)AS ?thumbnail) {query_select} '\
+            f'WHERE {{?resource ?attribute ?value; {query_body} '\
+            f'OPTIONAL {{ ?resource rdfs:comment ?comment FILTER (LANGMATCHES(LANG(?comment),"{language}") || LANG(?comment)="" )}} '\
+            'OPTIONAL { ?resource dbo:thumbnail ?thumbnail } '\
+            'OPTIONAL { ?resource rdfs:label ?label FILTER( LANGMATCHES(LANG(?label),"en") || LANG(?label)="") } '\
+            f'{all_filter} }} GROUP BY ?resource LIMIT 25 '\
         # DECIDERE SE INSERIRE OFFSET
     print(query)
-    query_result = run_query("http://dbpedia.org/sparql", query, 120)
+    query_result = run_query("http://dbpedia.org/sparql", query, 180)
     print(query_result)
 
     return query_result, attribute_to_show

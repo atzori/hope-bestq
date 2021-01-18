@@ -129,7 +129,8 @@ export default function SearchForm(props) {
 					if (response.data === []) {
 						alert("Risorsa con il label inserito non trovata.");
 					}
-
+					setIsLoading(false);
+					setSuggestions(undefined);
 					// Viene cancellata la richiesta dallo stato in quanto è stata completata
 					setRequest(null);
 				})

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, make_response, request, json, jsonify
 from pathlib import Path
 from query_functions import run_query, user_query
+import os
 
 app = Flask(__name__, template_folder="ReactBuilds")
 
@@ -84,7 +85,7 @@ def autocomplete_search():
             '?resource rdfs:label ?label. '\
             f'{additional_constraint} '\
             'FILTER(LANGMATCHES(LANG(?label),"it") || LANGMATCHES(LANG(?label),"en") || LANG(?label) = "") '\
-            f'FILTER( REGEX(?label, "^{search}", "i") )'\
+            f'FILTER( REGEX(str(?label), "^{search}", "i") )'\
             '} GROUP BY ?resource LIMIT 10'
     else:
         query = 'SELECT DISTINCT ?resource (SAMPLE(?label) AS ?label) WHERE { '\
@@ -131,7 +132,7 @@ def search_by_label():
     if not search:
         return "Error"
     # Se l'utente ha selezionato un rdf:type per la risorsa che sta cercando viene aggiunto il vincolo alla query
-    additional_constraint = '' if resource_type == '' else f'?resource rdf:type <{resource_type}>.'
+    additional_constraint = '' if resource_type == '' else f'?resource rdf:type <{resource_type}>. '
 
     # query = 'select distinct ?resource group_concat(distinct ?label; separator=" | ") as ?label ' \
     #        'group_concat(distinct ?comment; separator=" | ") as ?comment where {'\
@@ -144,13 +145,13 @@ def search_by_label():
     #        f'OPTIONAL{{?resource rdfs:comment ?comment FILTER(LANGMATCHES(LANG(?comment),"{secondary_language}"))}}'\
     #        '}GROUP BY ?resource LIMIT 10'
     query = 'SELECT DISTINCT ?resource (SAMPLE(?label) AS ?label) (SAMPLE(?comment) as ?comment) where {'\
-            '?resource rdfs:label ?label.'\
-            f'?label bif:contains "\'{search}*\'"'\
+            '?resource rdfs:label ?label. '\
+            f'?label bif:contains "\'{search}*\'". '\
             f'{additional_constraint}'\
-            f'FILTER(LANGMATCHES(LANG(?label),"{favorite_language}") || LANGMATCHES(LANG(?label),"{secondary_language}") || LANG(?label) = "")'\
-            'OPTIONAL{?resource rdfs:comment ?comment FILTER(LANG(?comment) = "")}'\
-            f'OPTIONAL{{?resource rdfs:comment ?comment FILTER(LANGMATCHES(LANG(?comment),"{favorite_language}"))}}'\
-            f'OPTIONAL{{?resource rdfs:comment ?comment FILTER(LANGMATCHES(LANG(?comment),"{secondary_language}"))}}'\
+            f'FILTER(LANGMATCHES(LANG(?label),"{favorite_language}") || LANGMATCHES(LANG(?label),"{secondary_language}") || LANG(?label) = "") '\
+            'OPTIONAL{?resource rdfs:comment ?comment FILTER(LANG(?comment) = "")} '\
+            f'OPTIONAL{{?resource rdfs:comment ?comment FILTER(LANGMATCHES(LANG(?comment),"{favorite_language}"))}} '\
+            f'OPTIONAL{{?resource rdfs:comment ?comment FILTER(LANGMATCHES(LANG(?comment),"{secondary_language}"))}} '\
             '}GROUP BY ?resource'
 
     print(query)
@@ -317,7 +318,7 @@ def structure_attributes_list(attributes_list):
 def sort_attribute_list(attribute_list):
     my_file = Path('./sortData/data.json')
 
-    if my_file.exists():
+    if my_file.exists() and os.stat(my_file).st_size != 0:
         with open(my_file) as f:
             sorted_attributes = json.load(f)
 
