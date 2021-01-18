@@ -5,22 +5,28 @@ import socket
 
 def run_query(endpoint_URL, query, timeout):
     # Creazione del wrapper sull'endpoint selezionato dall'utente
-    sparql = SPARQLWrapper(endpoint_URL)
+    sparql = SPARQLWrapper(
+        endpoint_URL, agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11")
     # Impostazione di defaultGraph (testato solo per DBPEDIA, trovare metodo per farlo funzionare in tutti)
     if endpoint_URL == "http://dbpedia.org/sparql":
         sparql.addDefaultGraph(endpoint_URL.replace('/sparql', ''))
-    elif endpoint_URL == "https://dati.camera.it/sparql":
-        sparql.addDefaultGraph("http://dati.camera.it/")
 
     # Viene impostato timeout di 30 secondi sulla query
     if timeout is not None or timeout != 0:
         sparql.setTimeout(timeout)
+        # Timeout inserito come parametro della richiesta in millisecondi
+        sparql.addParameter("timeout", str(timeout*1000))
     # Viene impostata la query
     sparql.setQuery(query)
     # Viene impostato il formato di conversione del risultato della query in JSON
     sparql.setReturnFormat(JSON)
     # Viene eseguita la query e restituito il dizionario contenente il risultato della stessa se riceve la risposta
     response_data = None
+
+    #! DEBUG stampa della richiesta
+    # print(vars(sparql._createRequest()))
+    #a = sparql.query()
+    # print(a)
 
     try:
         response_data = sparql.query().convert()
@@ -148,7 +154,7 @@ def user_query(constraints, endpoint_URL, language):
             f'{all_filter} }} GROUP BY ?resource LIMIT 25 '\
         # DECIDERE SE INSERIRE OFFSET
     print(query)
-    query_result = run_query("http://dbpedia.org/sparql", query, 180)
+    query_result = run_query(endpoint_URL, query, 120)
     print(query_result)
 
     return query_result, attribute_to_show
