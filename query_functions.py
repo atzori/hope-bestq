@@ -5,15 +5,13 @@ import socket
 
 def run_query(endpoint_URL, query, timeout):
     # Creazione del wrapper sull'endpoint selezionato dall'utente
-    sparql = SPARQLWrapper(
-        endpoint_URL, agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11")
+    sparql = SPARQLWrapper(endpoint_URL)
     # Impostazione di defaultGraph (testato solo per DBPEDIA, trovare metodo per farlo funzionare in tutti)
     if endpoint_URL == "http://dbpedia.org/sparql":
         sparql.addDefaultGraph(endpoint_URL.replace('/sparql', ''))
-
     # Viene impostato timeout di 30 secondi sulla query
     if timeout is not None or timeout != 0:
-        sparql.setTimeout(timeout)
+        sparql.setTimeout(timeout+10)
         # Timeout inserito come parametro della richiesta in millisecondi
         sparql.addParameter("timeout", str(timeout*1000))
     # Viene impostata la query
@@ -24,6 +22,7 @@ def run_query(endpoint_URL, query, timeout):
     response_data = None
 
     #! DEBUG stampa della richiesta
+
     # print(vars(sparql._createRequest()))
     #a = sparql.query()
     # print(a)
@@ -69,6 +68,8 @@ def create_type_based_comparison(attribute_value, value, operatore):
 
     if attribute_value['datatype'] in numeric_datatypes:
         return f'?{value_id_label or value_id} {operatore} "{value}"^^<{value_datatype}> '
+    elif attribute_value['datatype'] == "http://www.w3.org/2001/XMLSchema#gYear":
+        return f'YEAR(?{value_id_label or value_id}) {operatore} {value} '
     else:
         return f'xsd:double(?{value_id_label or value_id}) {operatore} {value} '
 

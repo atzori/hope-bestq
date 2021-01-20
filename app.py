@@ -80,7 +80,7 @@ def autocomplete_search():
     additional_constraint = '' if resource_type == '' else f'?resource rdf:type <{resource_type}>.'
 
     # Query che seleziona le prime n 10 risorse che hanno come sottostringa iniziale (del rdfs:label) quella inserita dall'utente
-    if endpoint_URL == "http://dati.camera.it/sparql" and resource_type != None:
+    if (endpoint_URL == "http://dati.camera.it/sparql" and resource_type != None) or len(search) < 4:
         query = 'SELECT DISTINCT ?resource (SAMPLE(?label) AS ?label) WHERE { '\
             '?resource rdfs:label ?label. '\
             f'{additional_constraint} '\
