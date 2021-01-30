@@ -1,9 +1,12 @@
 from flask import Flask, render_template, redirect, make_response, request, json, jsonify
 from pathlib import Path
 from query_functions import run_query, user_query
+from urllib.parse import quote_plus
+import time
 import os
 
-app = Flask(__name__, template_folder="ReactBuilds")
+app = Flask(__name__, template_folder="ReactBuilds",
+            static_folder="ReactBuilds/SinglePage/static")
 
 
 @app.route('/')
@@ -13,8 +16,8 @@ def redirect_home():
 
 @app.route('/homepage')
 def home():
-    app.static_folder = 'ReactBuilds/homepage/static'
-    return render_template('homepage/index.html')
+    #app.static_folder = 'ReactBuilds/SinglePage/static'
+    return render_template('SinglePage/index.html')
 
 
 # API che restituisce gli rdf:type di risorse presenti nell'endpoint selezionato ordinati in base al numero di risorse presenti con tale rdf:type
@@ -46,7 +49,7 @@ def get_endpoint_types():
             # Viene restituita la lista contenente i tipi di risorse presenti nell'endpoint
             return make_response(jsonify(endpoint_types))
     # Se il file non esiste o se esiste ma non è presente l'endpoint inserito dall'utente viene effettuata la query
-    query_result = run_query(endpoint, query, 0)
+    query_result = run_query(endpoint, query, 30)
     if type(query_result) is not str:
         endpoint_types = query_result['results']['bindings']
         # Viene aggiunta la lista di tipi di risorse presenti nell'endpoint al variabile data, in cui è salvato il contenuto del file
@@ -74,8 +77,8 @@ def autocomplete_search():
     # rdf:type della risorsa cercata dall'utente
     resource_type = request.args.get('resourceType')
     # ! Print per debug
-    print(resource_type)
-    print(search)
+    # print(resource_type)
+    # print(search)
     # In caso l'utente abbia scelto un rdf:type a cui deve appartenere la risorsa cercata viene inserito il vincolo nella query
     additional_constraint = '' if resource_type == '' else f'?resource rdf:type <{resource_type}>.'
 
@@ -98,7 +101,7 @@ def autocomplete_search():
     print(query)
     # results conterrà il risultato della query
     query_result = run_query(endpoint_URL, query, 40)
-    print(query_result)
+    # print(query_result)
     if type(query_result) is not str:
         # Viene assegnata la lista delle risorse ottenute a possible_search_list
         possible_search_list = query_result['results']['bindings']
@@ -156,7 +159,7 @@ def search_by_label():
 
     print(query)
     results = run_query(endpoint_URL, query, 120)
-    print(results)
+    # print(results)
 
     if type(results) is not str:
         # Viene assegnata la lista delle risorse ottenute a possible_search_list
@@ -175,7 +178,7 @@ def search_by_label():
 # route per la visualizzazione di una risorsa, tramite una get request vengono inviati: l'endpoint su cui fare la ricarca, l'uri della risorsa cercata e la lingua per i risultati
 @app.route('/resource', methods=['GET'])
 def search_by_uri():
-    app.static_folder = 'ReactBuilds/resource/static'
+    #app.static_folder = 'ReactBuilds/resource/static'
     endpoint = request.args.get('endpoint')
     language = request.args.get('language')
     resource_uri = request.args.get('uri')
@@ -187,13 +190,13 @@ def search_by_uri():
         f'FILTER( LANGMATCHES(LANG(?value),"{language}") || LANG(?value)="" || !isLiteral(?value))' \
         '} GROUP BY ?propertyURI ?propertyLabel ORDER BY ?propertyURI'
     query_result = run_query(endpoint, query, 0)
-    print(query_result)
+    # print(query_result)
     if type(query_result) is not str:
 
         resource = structure_attributes_list(
             query_result['results']['bindings'])
         #!DEBUG
-        print(resource)
+        # print(resource)
         resource = sort_attribute_list(resource)
 
         label = next(
@@ -201,7 +204,8 @@ def search_by_uri():
         comment = next(
             (attribute['value'][0]['value'] for attribute in resource if attribute['property']['uri'] == 'http://www.w3.org/2000/01/rdf-schema#comment'), None)
 
-        return render_template('resource/index.html', resource={'requestedResource': resource, 'label': label, 'comment': comment, 'language': language, 'endpoint': endpoint})
+        # return render_template('resource/index.html', resource={'requestedResource': resource, 'label': label, 'comment': comment, 'language': language, 'endpoint': endpoint})
+        return make_response({'requestedResource': resource, 'label': label, 'comment': comment})
     else:
         return redirect_home
 
@@ -234,29 +238,39 @@ def query():
 @app.route('/save_order', methods=['POST'])
 def save_user_order():
     req = request.get_json()
-    # Salvataggio dell'ordinamento tramite: "attributo modificato di posizione", "attributo precedente", "attributo successivo"
-    """
-    element = req['selected']
-    prev_element = req['prev']
-    next_element = req['next']
-
-    order = {element: {'prev': prev_element, 'next': next_element}}
-
-    my_file = Path('./sortData/data.json')
-    data = {}
-
-    if my_file.exists():
-        with open(my_file) as f:
-            data = json.load(f)
-
-    data.update(order)
-
-    with open(my_file, 'w') as outfile:
-        json.dump(data, outfile, indent=4)
-    """
+    # Viene salvato l'endpoint
+    endpoint_url = req['endpoint']
+    # Viene salvato il tipo della risorsa
+    resource_type = req['resourceType']
     # Salvataggio dell'ordinamento attraverso il salvataggio della lista completa degli attributi in ordine
     attribute_list = req['attributes']
-    my_file = Path('./sortData/data.json')
+    # define the name of the directory to be created
+    endpoint_directory = f'./sortData/{quote_plus(endpoint_url)}'
+    # print(endpoint_directory)
+    if not resource_type == "" or resource_type == None:
+        rdftype_directory = f'{endpoint_directory}/{quote_plus(resource_type)}'
+    else:
+        rdftype_directory = f'{endpoint_directory}/anytype'
+    # print(rdftype_directory)
+    if not os.path.exists(endpoint_directory):
+        try:
+            os.mkdir(endpoint_directory)
+        except OSError:
+            print("Creation of the directory %s failed" % endpoint_directory)
+        else:
+            print("Successfully created the directory %s " %
+                  endpoint_directory)
+
+    if not os.path.exists(rdftype_directory):
+        try:
+            os.mkdir(rdftype_directory)
+        except OSError:
+            print("Creation of the directory %s failed" % rdftype_directory)
+        else:
+            print("Successfully created the directory %s " % rdftype_directory)
+    # Stringa che contiene timestamp
+    timestr = time.strftime("%Y%m%d-%H%M%S")
+    my_file = Path(f'{rdftype_directory}/{timestr}.json')
 
     with open(my_file, 'w') as outfile:
         json.dump(attribute_list, outfile, indent=4)

@@ -29,7 +29,7 @@ def run_query(endpoint_URL, query, timeout):
 
     try:
         response_data = sparql.query().convert()
-        print(response_data)
+        # print(response_data)
     except socket.timeout:
         response_data = "ERROR: Timeout superato"
     except Exception:
@@ -156,7 +156,7 @@ def user_query(constraints, endpoint_URL, language):
         # DECIDERE SE INSERIRE OFFSET
     print(query)
     query_result = run_query(endpoint_URL, query, 120)
-    print(query_result)
+    # print(query_result)
 
     return query_result, attribute_to_show
 #   return run_query(endpoint_URL, final_query), attribute_to_show

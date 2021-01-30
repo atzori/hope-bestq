@@ -5,16 +5,11 @@ import reportWebVitals from "./reportWebVitals";
 
 import Home from "./home/Home";
 import ResourcePage from "./resource/ResourcePage";
+import SinglePage from "./singlePageApp/SinglePage";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ResourcePage
-			requestedResource={window.resource.requestedResource}
-			label={window.resource.label}
-			comment={window.resource.comment}
-			language={window.resource.language}
-			endpoint={window.resource.endpoint}
-		/>
+		<SinglePage />
 	</React.StrictMode>,
 	document.getElementById("root")
 );

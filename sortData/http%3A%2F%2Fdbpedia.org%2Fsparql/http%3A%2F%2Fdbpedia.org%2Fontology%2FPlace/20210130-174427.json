@@ -1,0 +1,21 @@
+[
+    "http://dbpedia.org/ontology/wikiPageID",
+    "http://dbpedia.org/ontology/wikiPageLength",
+    "http://dbpedia.org/ontology/wikiPageRevisionID",
+    "http://dbpedia.org/property/wikiPageUsesTemplate",
+    "http://purl.org/dc/terms/subject",
+    "http://www.georss.org/georss/point",
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "http://www.w3.org/2002/07/owl#sameAs",
+    "http://www.w3.org/2003/01/geo/wgs84_pos#geometry",
+    "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "http://www.w3.org/ns/prov#wasDerivedFrom",
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf",
+    "http://dbpedia.org/ontology/wikiPageWikiLink",
+    "http://dbpedia.org/ontology/location",
+    "http://dbpedia.org/property/built",
+    "http://dbpedia.org/property/designation1Date",
+    "http://dbpedia.org/property/designation1Number",
+    "http://dbpedia.org/property/location"
+]

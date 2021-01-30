@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.fc294887.chunk.css",
+    "main.js": "./static/js/main.9208f9c3.chunk.js",
+    "main.js.map": "./static/js/main.9208f9c3.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.b55e68f4.js",
+    "runtime-main.js.map": "./static/js/runtime-main.b55e68f4.js.map",
+    "static/js/2.21844b65.chunk.js": "./static/js/2.21844b65.chunk.js",
+    "static/js/2.21844b65.chunk.js.map": "./static/js/2.21844b65.chunk.js.map",
+    "static/js/3.dda9104b.chunk.js": "./static/js/3.dda9104b.chunk.js",
+    "static/js/3.dda9104b.chunk.js.map": "./static/js/3.dda9104b.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.fc294887.chunk.css.map": "./static/css/main.fc294887.chunk.css.map",
+    "static/js/2.21844b65.chunk.js.LICENSE.txt": "./static/js/2.21844b65.chunk.js.LICENSE.txt",
+    "static/js/main.9208f9c3.chunk.js.LICENSE.txt": "./static/js/main.9208f9c3.chunk.js.LICENSE.txt",
+    "static/media/grip.8b88c833.svg": "./static/media/grip.8b88c833.svg",
+    "static/media/tail-spin.8e71e38f.svg": "./static/media/tail-spin.8e71e38f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b55e68f4.js",
+    "static/js/2.21844b65.chunk.js",
+    "static/css/main.fc294887.chunk.css",
+    "static/js/main.9208f9c3.chunk.js"
+  ]
+}
