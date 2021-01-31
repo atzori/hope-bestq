@@ -1,36 +1,83 @@
+**_Questo readme va unito a quello generale!_**
+
 # Per iniziare:
 
-Installare node, consigliata versione >= 12, node versione consigliata: 6
-Installare Yarn
-Andare nella cartella hope-bestq/frontend-react/
-Lanciare da terminale il comando: "yarn install" verranno installate tutte le dipendenze necessarie.
+## Installare node, consigliata versione >= 12
+Download dal sito: https://nodejs.org/en/download/  
+oppure tramite nvm: https://github.com/nvm-sh/nvm#installing-and-updating
 
-Per eseguire il progetto lanciare il comando: "yarn start"
-Per creare la build del progetto lanciare il comando: "yarn build"
+## Installare Yarn
+_Note:_
+* _Yarn 1 o 2?_
 
-La versione del progetto utiilizzata ora è si trova all'interno della cartella frontend-react/singlePageApp/SinglePage.jsx
+Istruzioni dal sito: https://yarnpkg.com/getting-started/install (npm è incluso in Node)
+
+## Installazione delle dipendenze
+Andare nella cartella **hope-bestq/frontend-react/**  
+Lanciare da terminale il comando: `yarn install`. Verranno installate tutte le dipendenze necessarie.
+
+## Esecuzione con il server di default
+_Note:_
+* _Vanno eseguiti sia il server di frontend che il server di backend (flask)?_
+
+Per eseguire il progetto lanciare il comando: `yarn start`
+
+## Build delle risorse (JS, CSS) in seguito alle modifiche
+Per creare la build del progetto lanciare il comando: `yarn build`
+
+
+**La versione del progetto utilizzata ora si trova all'interno della cartella frontend-react/singlePageApp/SinglePage.jsx**
 
 ---
 
-Per visualizzare la pagina home recatevi nella cartella ./src e modificare il file index.jsx come segue: - Sostituire il contenuto di ReactDOM.render come segue: ReactDOM.render(<React.StrictMode> <Home> </React.StrictMode>,document.getElementById("root"))
+# Builds
+### Home
+_Note:_
+* _Modificando un file jsx mentre il server di frontend è in esecuzione, avviene una compilazione. È comunque necessario eseguire la build in seguito?_
 
-Per Creare la build della home modifichiamo come sopra il file index.jsx e lanciamo il comando "yarn build", nella cartella build troviamo la build della pagina
+Per visualizzare la pagina home recatevi nella cartella **./src** e modificare il file **index.jsx** come segue:
 
-Per visualizzare la pagine ResourcePage recatevi nella cartella ./src e modificate il file index.jsx come segue: - Sostituire il contenuto di ReactDOM.render come segue: ReactDOM.render(<React.StrictMode> <ResourcePage> </React.StrictMode>,document.getElementById("root")) - Aprire il file ReactPage.jsx che si trova nella cartella ./src/resource e rimuovere le righe commentate sotto il commento "//! DA UTILIZZARE SOLO PER DEBUG, SI PUO' ELIMINARE PER LA CREAZIONE DELLA BUILD" - Recarsi nella pagina iniziale del progetto ed eseguire anche il backend attivando il virtual environment e lanciando il comando "flask run"
-! Questo ci permetterà di avere accesso a tutte le funzionalità del backend e ci verrà visualizzata una risorsa per effettuare le prove delle diverse funzioni, la risorsa è Los Angeles
+- Sostituire il contenuto di `ReactDOM.render` come segue:  
+  `ReactDOM.render(<React.StrictMode> <Home> </React.StrictMode>,document.getElementById("root"))`
 
-Per creare la build della pagina RosourcePage modificare il file index.jsx come segue: - Sostituire il contenuto di ReactDom.render() come segue: ReactDOM.render(
-<React.StrictMode>
-<ResourcePage
-        requestedResource={window.resource.requestedResource}
-        label={window.resource.label}
-        comment={window.resource.comment}
-        language={window.resource.language}
-        endpoint={window.resource.endpoint}
-    />
-</React.StrictMode>,
-document.getElementById("root")
-); - Lanciare il comando "yarn build" - Modificare il file index.html presente nella cartella build aggiungendo dopo <noscript></noscript>: <script>window.resource = {{resource | tojson}};</script> - Questo ci permette di utilizzare i dati inviati passati alla build da flask nel backend
+Per Creare la build della home modifichiamo come sopra il file **index.jsx** e lanciamo il comando `yarn build`; nella cartella **build** troviamo la build della pagina
+
+### ResourcePage
+_Note:_
+* _Cosa si intende con "rimuovere le righe commentate"? Renderle nuovamente eseguibili?_
+* _È necessario che venga eseguito il server di frontend?_
+* _Quando va usato il file index.jsx nella sua forma originale (cioè usando SinglePage)?_
+* _Modificando un file jsx mentre il server di frontend è in esecuzione, avviene una compilazione. È comunque necessario eseguire la build in seguito?_
+
+Per visualizzare la pagine ResourcePage recatevi nella cartella **./src** e modificate il file **index.jsx** come segue:
+
+- Sostituire il contenuto di `ReactDOM.render` come segue:  
+  `ReactDOM.render(<React.StrictMode> <ResourcePage> </React.StrictMode>, document.getElementById("root"))`  
+- Aprire il file **ResourcePage.jsx** che si trova nella cartella **./src/resource** e rimuovere le righe commentate sotto il commento:  
+  `//! DA UTILIZZARE SOLO PER DEBUG, SI PUO' ELIMINARE PER LA CREAZIONE DELLA BUILD`  
+- Recarsi nella pagina iniziale del progetto ed eseguire anche il backend attivando il virtual environment e lanciando il comando `flask run`  
+  Questo ci permetterà di avere accesso a tutte le funzionalità del backend e ci verrà visualizzata una risorsa per effettuare le prove delle diverse funzioni, la risorsa è Los Angeles
+
+Per creare la build della pagina ResourcePage modificare il file **index.jsx** come segue:  
+- Sostituire il contenuto di `ReactDom.render()` come segue:  
+```
+  ReactDOM.render(
+    <React.StrictMode>
+      <ResourcePage
+              requestedResource={window.resource.requestedResource}
+              label={window.resource.label}
+              comment={window.resource.comment}
+              language={window.resource.language}
+              endpoint={window.resource.endpoint}
+      />
+    </React.StrictMode>,
+    document.getElementById("root")
+  );
+```
+- Lanciare il comando `yarn build`  
+- Modificare il file **index.html** presente nella cartella **build** aggiungendo dopo `<noscript></noscript>`:  
+  ```<script>window.resource = {{resource | tojson}};</script>```  
+- Questo ci permette di utilizzare i dati inviati passati alla build da flask nel backend
 
 ---
 
