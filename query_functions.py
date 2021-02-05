@@ -74,9 +74,10 @@ def create_type_based_comparison(attribute_value, value, operatore):
         return f'xsd:double(?{value_id_label or value_id}) {operatore} {value} '
 
 
-def user_query(constraints, endpoint_URL, language):
+def user_query(constraints, endpoint_URL, language, rdftype_constraint):
     query_select = ''
-    query_body = ''
+    # Se l'utente ha scelto di selezionare un vincolo sul rdf:type dei risultati che vuole ottenere viene inserito nel body della query
+    query_body = f'rdf:type <{rdftype_constraint}>; ' if rdftype_constraint is not None else ''
     query_filter = ''
     attribute_to_show = []
 

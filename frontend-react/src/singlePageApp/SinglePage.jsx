@@ -9,6 +9,7 @@ import Row from "react-bootstrap/Row"; //Row
 import Button from "react-bootstrap/Button";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
+import Form from "react-bootstrap/Form";
 // Import dei component che compongono la pagina
 import Header from "./Header";
 import EndpointSelection from "./EndpointSelection";
@@ -34,7 +35,7 @@ export default function SinglePage() {
 	 * di rdf:type delle risorse presenti nel nuovo endpoint inserito, viene utilizzato per mostrare uno spinner di caricamento.*/
 	const [endpointLoading, setEndpointLoading] = useState(false);
 	// Stato che contiene rdf type su cui si effettua la ricerca
-	const [resourceType, setResourceType] = useState(undefined);
+	const [searchTypeConstraint, setSearchTypeConstraint] = useState(undefined);
 	// Stato che contiene la lista di risorse che hanno il label inserito dall'utente a seguito di una ricerca tramite il tasto Search,
 	const [resourcesList, setResourcesList] = useState(undefined);
 	// Stato che conterrà la risorsa cercata dall'utente
@@ -52,6 +53,11 @@ export default function SinglePage() {
 	const [selectedTab, setSelectedTab] = useState("search");
 	// Stato utilizzato per mostrare uno spinner di caricamento in caso di attesa di una risposta dal server a seguito di una richiesta
 	const [isLoading, setIsLoading] = useState(false);
+	// Stato utilizzato per continuare ad utilizzare il vincolo sul tipo
+	const [resourceTypeConstraint, setResourceTypeConstraint] = useState({
+		type: undefined,
+		isConstraint: false,
+	});
 	// Quando viene caricata la pagine vengono caricati i dati presenti nel sessionStorage in caso siano già stati salvati altrimenti vengono impostati i valori di default
 	useEffect(() => {
 		// Get del valore presente nel session storage della lingua selezionata dall'utente in precedenza
@@ -77,7 +83,7 @@ export default function SinglePage() {
 		getEndpointTypes(sessionEndpoint || "http://dbpedia.org/sparql");
 		// Viene posto a undefined il valore dello stato che contiene rdf type precedentemente selezionato
 
-		setResourceType(undefined);
+		setSearchTypeConstraint(undefined);
 	}, []);
 	/* Funzione asincrona che tramite chiamata all'api ottiene gli rdf:type dell'endpoint inserito dall'utente e li salva nello stato.
 	 endpointUrl è l'endpoint su cui effettuare la query per trovare gli rdf:type delle risorse presenti nell'endpoint */
@@ -110,13 +116,23 @@ export default function SinglePage() {
 		const attributes = resource.map((attribute) => attribute.property.uri);
 		console.log(attributes); //! Log di debug
 		// Chiamata all'api che salva l'ordine degli attributi inviando l'intera lista di attributi della risorsa
-		console.log(resourceType);
-		const rdfType = resourceType ? resourceType?.type.value : "";
+		console.log(resourceTypeConstraint.type);
+		let rdftypeConstraint = null;
+
+		console.log("BBBBBBBBBBBBBBBBBBBBB", rdftypeConstraint);
+		if (
+			resourceTypeConstraint.isConstraint &&
+			resourceTypeConstraint.type !== undefined
+		) {
+			rdftypeConstraint = resourceTypeConstraint.type.uri;
+		}
+
+		console.log("CCCCCCCCCCCCCCCCCCCCC", rdftypeConstraint);
 		axios
 			.post("/save_order", {
 				attributes: attributes,
 				endpoint: endpointUrl,
-				resourceType: rdfType,
+				rdftypeConstraint: rdftypeConstraint,
 			})
 			.then((response) => console.log(response))
 			.catch((error) => console.log(error));
@@ -151,6 +167,7 @@ export default function SinglePage() {
 		const axiosSource = axios.CancelToken.source();
 		// Viene memorizzato nello stato apposito
 		setRequest(axiosSource);
+
 		/* Post request al server, a cui viene passato:
 		  L'url dell'endpoint selzionato dall'utente, la lingua selezionata per i risultati, la lista di vincoli e anche il cancelToken */
 		await axios
@@ -160,6 +177,7 @@ export default function SinglePage() {
 					endpointUrl: endpointUrl,
 					language: language,
 					constraints: constraints,
+					rdftypeConstraint: rdftypeConstraint,
 				},
 				{
 					cancelToken: axiosSource.token,
@@ -211,6 +229,22 @@ export default function SinglePage() {
 				setResourceLabel(response.data.label);
 				// Viene salvato nello apposito stato il comment della risorsa
 				setResourceComment(response.data.comment);
+				// Viene salvato rdf:type su cui è stato posto il vincolo se presente
+				if (searchTypeConstraint !== undefined) {
+					console.log(searchTypeConstraint);
+					setResourceTypeConstraint({
+						type: {
+							label: searchTypeConstraint?.label?.value,
+							uri: searchTypeConstraint?.type?.value,
+						},
+						isConstraint: true,
+					});
+				} else {
+					setResourceTypeConstraint({
+						type: undefined,
+						isConstraint: false,
+					});
+				}
 				// Viene spostata la visualizzazione alla tab resource in cui è possibile vedere la tabella della risorsa richiesta
 				setSelectedTab("resource");
 				// Viene spostata la visualizzazione al top della pagina
@@ -253,8 +287,8 @@ export default function SinglePage() {
 						endpointLoading={endpointLoading}
 						setResourcesList={setResourcesList}
 						getResource={getResource}
-						resourceType={resourceType}
-						setResourceType={setResourceType}
+						resourceType={searchTypeConstraint}
+						setResourceType={setSearchTypeConstraint}
 					/>
 					{resourcesList?.length > 0 && (
 						<SearchResults
@@ -278,6 +312,34 @@ export default function SinglePage() {
 								"No comment avaiable for this resource"}
 						</p>
 					</div>
+					{resourceTypeConstraint.type !== undefined && (
+						<Form
+							inline
+							className="width-90-centered mb-2 resource-type"
+						>
+							<Form.Check
+								type="checkbox"
+								id="resource-type-checkbox"
+								checked={resourceTypeConstraint.isConstraint}
+								onChange={() => {
+									const aux = {
+										type: resourceTypeConstraint.type,
+										isConstraint: !resourceTypeConstraint.isConstraint,
+									};
+									setResourceTypeConstraint(aux);
+								}}
+							/>
+							<Form.Label htmlFor="resource-type-checkbox">
+								Continue with the constraint on the type:
+								<span>
+									{" <"}
+									{resourceTypeConstraint?.type?.label ||
+										resourceTypeConstraint?.type?.uri}
+									{">"}
+								</span>
+							</Form.Label>
+						</Form>
+					)}
 					<ResourceTable
 						resource={resource}
 						setResource={setResource}
@@ -286,9 +348,9 @@ export default function SinglePage() {
 					<br />
 					<Container fluid id="footer">
 						<p>
-							Dopo aver modificato gli attributi per effettuare
-							una query clicca il tasto QUERY presente sulla
-							destra
+							After having inserted the constraints that define
+							the query you want to perform click the button "Run
+							Query" on the right.
 						</p>
 						<Button variant="success" size="lg" onClick={query}>
 							Run Query

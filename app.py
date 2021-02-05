@@ -16,7 +16,7 @@ def redirect_home():
 
 @app.route('/homepage')
 def home():
-    #app.static_folder = 'ReactBuilds/SinglePage/static'
+    # app.static_folder = 'ReactBuilds/SinglePage/static'
     return render_template('SinglePage/index.html')
 
 
@@ -178,7 +178,7 @@ def search_by_label():
 # route per la visualizzazione di una risorsa, tramite una get request vengono inviati: l'endpoint su cui fare la ricarca, l'uri della risorsa cercata e la lingua per i risultati
 @app.route('/resource', methods=['GET'])
 def search_by_uri():
-    #app.static_folder = 'ReactBuilds/resource/static'
+    # app.static_folder = 'ReactBuilds/resource/static'
     endpoint = request.args.get('endpoint')
     language = request.args.get('language')
     resource_uri = request.args.get('uri')
@@ -217,10 +217,12 @@ def query():
     endpoint_URL = req['endpointUrl']
     language = req['language']
     constraints = req['constraints']
+    # Contiene l'uri del rdf:type da inserire come vincolo se l'utente l'ha selezionato
+    rdftype_constraint = req['rdftypeConstraint']
 
     print(constraints)
     query_result, attribute_to_show = user_query(
-        constraints, endpoint_URL, language)
+        constraints, endpoint_URL, language, rdftype_constraint)
 
     if type(query_result) is not str:
         resources = query_result['results']['bindings'] or None
@@ -241,17 +243,16 @@ def save_user_order():
     # Viene salvato l'endpoint
     endpoint_url = req['endpoint']
     # Viene salvato il tipo della risorsa
-    resource_type = req['resourceType']
+    resource_type = req['rdftypeConstraint']
     # Salvataggio dell'ordinamento attraverso il salvataggio della lista completa degli attributi in ordine
     attribute_list = req['attributes']
     # define the name of the directory to be created
     endpoint_directory = f'./sortData/{quote_plus(endpoint_url)}'
-    # print(endpoint_directory)
-    if not resource_type == "" or resource_type == None:
+    if resource_type is not None:
         rdftype_directory = f'{endpoint_directory}/{quote_plus(resource_type)}'
     else:
         rdftype_directory = f'{endpoint_directory}/anytype'
-    # print(rdftype_directory)
+    print(rdftype_directory)
     if not os.path.exists(endpoint_directory):
         try:
             os.mkdir(endpoint_directory)
