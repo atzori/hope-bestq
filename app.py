@@ -182,6 +182,7 @@ def search_by_uri():
     endpoint = request.args.get('endpoint')
     language = request.args.get('language')
     resource_uri = request.args.get('uri')
+    resource_type = request.args.get('type') if request.args.get('type') != "undefined" else None
 
     query = 'select distinct ?propertyURI ?propertyLabel ?value ?valueLabel where {' \
         f'<{resource_uri}> ?propertyURI ?value.' \
@@ -197,7 +198,7 @@ def search_by_uri():
             query_result['results']['bindings'])
         #!DEBUG
         # print(resource)
-        resource = sort_attribute_list(resource)
+        resource = sort_attribute_list(resource, endpoint, resource_type)
 
         label = next(
             (attribute['value'][0]['value'] for attribute in resource if attribute['property']['uri'] == 'http://www.w3.org/2000/01/rdf-schema#label'), None)
@@ -330,16 +331,32 @@ def structure_attributes_list(attributes_list):
     return structured_attributes_list
 
 
-def sort_attribute_list(attribute_list):
-    my_file = Path('./sortData/data.json')
+def sort_attribute_list(attribute_list, endpoint_url, resource_type):
+    # Attribute ordering files are organized in a per-endpoint, per-type basis
+    endpoint_directory = f'./sortData/{quote_plus(endpoint_url)}'
 
-    if my_file.exists() and os.stat(my_file).st_size != 0:
-        with open(my_file) as f:
-            sorted_attributes = json.load(f)
+    if resource_type is not None :
+        rdftype_directory = f'{endpoint_directory}/{quote_plus(resource_type)}'
+    else :
+        # General directory for unseen types
+        rdftype_directory = f'{endpoint_directory}/anytype'
 
-        attribute_list.sort(key=lambda x: sorted_attributes.index(
-            x['property']['uri']) if x['property']['uri'] in sorted_attributes else len(sorted_attributes))
+    order_folder = Path(f'{rdftype_directory}')
+    if order_folder.exists() :
+        # Retrieves files in folder
+        order_files = os.listdir(order_folder)
+        order_files.sort(reverse=True)
 
+        # Gets most recent ordering file
+        last_order_file = Path(f'{rdftype_directory}/{order_files[0]}')
+        # Checks file validity
+        if os.stat(last_order_file).st_size != 0 :
+            with open(last_order_file) as fh:
+                # Sorted attributes are in JSON format
+                sorted_attributes = json.load(fh)
+                # Sorts the attribute list according to last user sorting
+                attribute_list.sort(key=lambda x: sorted_attributes.index(x['property']['uri']) if x['property']['uri'] in sorted_attributes
+                                                  else len(sorted_attributes))
     return attribute_list
 
 

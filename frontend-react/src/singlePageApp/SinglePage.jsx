@@ -219,7 +219,7 @@ export default function SinglePage() {
 		// Richiesta get al server per ottenere la risorsa selezionata dall'utente
 		await axios
 			.get(
-				`/resource?endpoint=${endpointUrl}&language=${language}&uri=${uri}`
+				`/resource?endpoint=${endpointUrl}&language=${language}&uri=${uri}&type=${searchTypeConstraint?.type?.value}`
 			)
 			.then((response) => {
 				console.log(response.data); //!Log di debug
