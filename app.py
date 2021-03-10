@@ -60,6 +60,7 @@ def get_endpoint_types():
         # Viene restituita la lista contenente i tipi di risorse presenti nell'endpoint
         return make_response(jsonify(endpoint_types))
     else:
+        print(f"Endpoint replied with message\n\t{query_result}")
         return make_response(jsonify(query_result), 408)
 
 
@@ -113,6 +114,7 @@ def autocomplete_search():
         # Risposta con la lista delle risorse
         return make_response(jsonify(possible_search_list))
     else:
+        print(f"Endpoint replied with message\n\t{query_result}")
         return make_response(jsonify(query_result), 408)
 
 
@@ -172,6 +174,7 @@ def search_by_label():
         # Risposta con la lista delle risorse
         return make_response(jsonify(possible_search_list))
     else:
+        print(f"Endpoint replied with message\n\t{query_result}")
         return make_response(jsonify(results), 408)
 
 
@@ -208,6 +211,7 @@ def search_by_uri():
         # return render_template('resource/index.html', resource={'requestedResource': resource, 'label': label, 'comment': comment, 'language': language, 'endpoint': endpoint})
         return make_response({'requestedResource': resource, 'label': label, 'comment': comment})
     else:
+        print(f"Endpoint replied with message\n\t{query_result}")
         return redirect_home
 
 
@@ -231,6 +235,7 @@ def query():
                      for index, resource in enumerate(resources)]
         return make_response(jsonify(resources))
     else:
+        print(f"Endpoint replied with message\n\t{query_result}")
         if query_result == "Nessun Risultato":
             return make_response("Nessun risultato trovato", 404)
         else:
