@@ -151,3 +151,5 @@ yarn-debug.log*
 yarn-error.log*
 
 .vs
+
+ReactBuilds/*

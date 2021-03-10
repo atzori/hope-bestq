@@ -8,10 +8,10 @@ import ResourcePage from "./resource/ResourcePage";
 import SinglePage from "./singlePageApp/SinglePage";
 
 ReactDOM.render(
-	<React.StrictMode>
-		<SinglePage />
-	</React.StrictMode>,
-	document.getElementById("root")
+   <React.StrictMode>
+      <SinglePage />
+   </React.StrictMode>,
+   document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
